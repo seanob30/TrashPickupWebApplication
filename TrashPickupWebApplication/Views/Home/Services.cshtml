@@ -1,0 +1,32 @@
+﻿@model IEnumerable<TrashPickupWebApplication.ViewModels.AddressViewModel>
+@{
+    ViewBag.Title = "Services";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Services</h2>
+<h3>@ViewBag.Message</h3>
+<body>
+    <table>
+    @foreach (var item in Model)
+    {
+    <tr>
+        <th>
+            @Html.DisplayFor(modelItem => item.ID)
+        </th>
+        <td>
+            @Html.DisplayFor(modelItem => item.StreetAddressID)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.CityID)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.StateID)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ZipCode)
+        </td>
+    </tr>
+    }
+    </table>
+    </body>
