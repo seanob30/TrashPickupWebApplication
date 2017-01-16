@@ -3,7 +3,6 @@ using System.Security.Claims;
 using System.Threading.Tasks;
 using Microsoft.AspNet.Identity;
 using Microsoft.AspNet.Identity.EntityFramework;
-using TrashPickupWebApplication.ViewModels;
 
 namespace TrashPickupWebApplication.Models
 {
@@ -21,7 +20,6 @@ namespace TrashPickupWebApplication.Models
 
     public class ApplicationDbContext : IdentityDbContext<ApplicationUser>
     {
-        public DbSet<AddressViewModel> Address { get; set; }
         public DbSet<StreetAddress> StreetAddress { get; set; }
         public DbSet<City> City { get; set; }
         public DbSet<State> State { get; set; }
@@ -30,6 +28,9 @@ namespace TrashPickupWebApplication.Models
         public DbSet<PickupIntervals> PickupIntervals { get; set; }
         public DbSet<RegularServices> RegularServices { get; set; }
         public DbSet<ScheduledServices> ScheduledServices { get; set; }
+        public DbSet<AccountTypes> AccountType { get; set; }
+        public DbSet<Address> Address { get; set; }
+        public DbSet<UserInfo> UserInfo { get; set; }
 
         public ApplicationDbContext()
             : base("DefaultConnection", throwIfV1Schema: false)

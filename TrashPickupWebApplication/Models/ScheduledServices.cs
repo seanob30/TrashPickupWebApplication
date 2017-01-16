@@ -17,7 +17,5 @@ namespace TrashPickupWebApplication.Models
 
         public string ServiceIntervalID { get; set; }
         public PickupIntervals ServiceIntervalId { get; set; }
-
-
     }
 }

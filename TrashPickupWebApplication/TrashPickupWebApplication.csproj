@@ -219,7 +219,14 @@
     <Compile Include="Migrations\201701161641187_ContextForServices.Designer.cs">
       <DependentUpon>201701161641187_ContextForServices.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201701161742255_UserInfoAddressAndContextAdded.cs" />
+    <Compile Include="Migrations\201701161742255_UserInfoAddressAndContextAdded.Designer.cs">
+      <DependentUpon>201701161742255_UserInfoAddressAndContextAdded.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
+    <Compile Include="Models\Address.cs" />
+    <Compile Include="Models\UserInfo.cs" />
+    <Compile Include="Models\AccountTypes.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\City.cs" />
     <Compile Include="Models\Days.cs" />
@@ -233,7 +240,6 @@
     <Compile Include="Models\ZipCode.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Startup.cs" />
-    <Compile Include="ViewModels\AddressViewModel.cs" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Content\bootstrap-journal.css" />
@@ -325,6 +331,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201701161641187_ContextForServices.resx">
       <DependentUpon>201701161641187_ContextForServices.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201701161742255_UserInfoAddressAndContextAdded.resx">
+      <DependentUpon>201701161742255_UserInfoAddressAndContextAdded.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
