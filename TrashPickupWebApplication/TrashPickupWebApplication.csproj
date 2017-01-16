@@ -211,11 +211,23 @@
     <Compile Include="Migrations\201701132345078_Migration1.1.Designer.cs">
       <DependentUpon>201701132345078_Migration1.1.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201701161637068_ServicesIntervalsDaysScheduledservides.cs" />
+    <Compile Include="Migrations\201701161637068_ServicesIntervalsDaysScheduledservides.Designer.cs">
+      <DependentUpon>201701161637068_ServicesIntervalsDaysScheduledservides.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201701161641187_ContextForServices.cs" />
+    <Compile Include="Migrations\201701161641187_ContextForServices.Designer.cs">
+      <DependentUpon>201701161641187_ContextForServices.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\City.cs" />
+    <Compile Include="Models\Days.cs" />
     <Compile Include="Models\IdentityModels.cs" />
+    <Compile Include="Models\PickupIntervals.cs" />
     <Compile Include="Models\ManageViewModels.cs" />
+    <Compile Include="Models\RegularServices.cs" />
+    <Compile Include="Models\ScheduledServices.cs" />
     <Compile Include="Models\State.cs" />
     <Compile Include="Models\StreetAddress.cs" />
     <Compile Include="Models\ZipCode.cs" />
@@ -307,6 +319,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201701132345078_Migration1.1.resx">
       <DependentUpon>201701132345078_Migration1.1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201701161637068_ServicesIntervalsDaysScheduledservides.resx">
+      <DependentUpon>201701161637068_ServicesIntervalsDaysScheduledservides.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201701161641187_ContextForServices.resx">
+      <DependentUpon>201701161641187_ContextForServices.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

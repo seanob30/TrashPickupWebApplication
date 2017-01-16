@@ -26,6 +26,11 @@ namespace TrashPickupWebApplication.Models
         public DbSet<City> City { get; set; }
         public DbSet<State> State { get; set; }
         public DbSet<ZipCode> ZipCode { get; set; }
+        public DbSet<Days> Days { get; set; }
+        public DbSet<PickupIntervals> PickupIntervals { get; set; }
+        public DbSet<RegularServices> RegularServices { get; set; }
+        public DbSet<ScheduledServices> ScheduledServices { get; set; }
+
         public ApplicationDbContext()
             : base("DefaultConnection", throwIfV1Schema: false)
         {
