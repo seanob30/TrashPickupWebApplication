@@ -6,3 +6,13 @@
 
 <h2>MyServices</h2>
 
+
+    <p> Here we can put a table of the current scheduled services based on the information the client has stored.
+   Then we have buttons for 'change my services', 'change my info', 'view my bill', etc. </p>
+
+<br />
+<ul>
+    <li>@Html.ActionLink("Update My Services", "ChangeMyServices", "MyServices", routeValues: null, htmlAttributes: new { id = "registerLink" })</li>
+    <li>@Html.ActionLink("Update My Info", "ChangeMyInfo", "MyServices", routeValues: null, htmlAttributes: new { id = "registerLink" })</li>
+
+</ul>
