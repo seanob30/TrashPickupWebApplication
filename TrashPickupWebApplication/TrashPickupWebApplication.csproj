@@ -207,10 +207,6 @@
     <Compile Include="Migrations\201701132324369_InitialMigration.Designer.cs">
       <DependentUpon>201701132324369_InitialMigration.cs</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\201701132345078_Migration1.1.cs" />
-    <Compile Include="Migrations\201701132345078_Migration1.1.Designer.cs">
-      <DependentUpon>201701132345078_Migration1.1.cs</DependentUpon>
-    </Compile>
     <Compile Include="Migrations\201701161637068_ServicesIntervalsDaysScheduledservides.cs" />
     <Compile Include="Migrations\201701161637068_ServicesIntervalsDaysScheduledservides.Designer.cs">
       <DependentUpon>201701161637068_ServicesIntervalsDaysScheduledservides.cs</DependentUpon>
@@ -222,6 +218,14 @@
     <Compile Include="Migrations\201701161742255_UserInfoAddressAndContextAdded.cs" />
     <Compile Include="Migrations\201701161742255_UserInfoAddressAndContextAdded.Designer.cs">
       <DependentUpon>201701161742255_UserInfoAddressAndContextAdded.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201701161807458_somethingMightBeWrong.cs" />
+    <Compile Include="Migrations\201701161807458_somethingMightBeWrong.Designer.cs">
+      <DependentUpon>201701161807458_somethingMightBeWrong.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201701161826010_IThinkIMightHaveFixedIt.cs" />
+    <Compile Include="Migrations\201701161826010_IThinkIMightHaveFixedIt.Designer.cs">
+      <DependentUpon>201701161826010_IThinkIMightHaveFixedIt.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\Address.cs" />
@@ -323,9 +327,6 @@
     <EmbeddedResource Include="Migrations\201701132324369_InitialMigration.resx">
       <DependentUpon>201701132324369_InitialMigration.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201701132345078_Migration1.1.resx">
-      <DependentUpon>201701132345078_Migration1.1.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201701161637068_ServicesIntervalsDaysScheduledservides.resx">
       <DependentUpon>201701161637068_ServicesIntervalsDaysScheduledservides.cs</DependentUpon>
     </EmbeddedResource>
@@ -334,6 +335,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201701161742255_UserInfoAddressAndContextAdded.resx">
       <DependentUpon>201701161742255_UserInfoAddressAndContextAdded.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201701161807458_somethingMightBeWrong.resx">
+      <DependentUpon>201701161807458_somethingMightBeWrong.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201701161826010_IThinkIMightHaveFixedIt.resx">
+      <DependentUpon>201701161826010_IThinkIMightHaveFixedIt.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

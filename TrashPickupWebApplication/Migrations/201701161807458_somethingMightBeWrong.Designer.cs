@@ -7,13 +7,13 @@ namespace TrashPickupWebApplication.Migrations
     using System.Resources;
     
     [GeneratedCode("EntityFramework.Migrations", "6.1.3-40302")]
-    public sealed partial class Migration11 : IMigrationMetadata
+    public sealed partial class somethingMightBeWrong : IMigrationMetadata
     {
-        private readonly ResourceManager Resources = new ResourceManager(typeof(Migration11));
+        private readonly ResourceManager Resources = new ResourceManager(typeof(somethingMightBeWrong));
         
         string IMigrationMetadata.Id
         {
-            get { return "201701132345078_Migration1.1"; }
+            get { return "201701161807458_somethingMightBeWrong"; }
         }
         
         string IMigrationMetadata.Source

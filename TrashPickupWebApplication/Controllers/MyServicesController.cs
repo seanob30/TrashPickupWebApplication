@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
+using TrashPickupWebApplication.Models;
 
 namespace TrashPickupWebApplication.Controllers
 {
@@ -20,6 +21,17 @@ namespace TrashPickupWebApplication.Controllers
         public ActionResult ChangeMyInfo()
         {
             return View();
+        }
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public ActionResult ChangeMyInfo([Bind(Include = "FirstName,LastName")] UserInfo UserInfo )
+        {
+            if (ModelState.IsValid)
+            {
+                UserInfo.FirstName = "FirstName";
+                UserInfo.LastName = "LastName";
+            }
+            return View("Index");
         }
         public ActionResult ViewMyBill()
         {
