@@ -38,5 +38,11 @@ namespace TrashPickupWebApplication.Controllers
 
             return View(_db.Address.ToList());
         }
+        public ActionResult MyServices()
+        {
+            ViewBag.Message = "Your Services Page.";
+
+            return View();
+        }
     }
 }

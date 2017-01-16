@@ -19,14 +19,30 @@
                 </button>
                 @Html.ActionLink("Trash Pickup", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })
             </div>
+@using Microsoft.AspNet.Identity
+@if (Request.IsAuthenticated)
+{
             <div class="navbar-collapse collapse">
                 <ul class="nav navbar-nav">
                     <li>@Html.ActionLink("Mission", "Mission", "Home")</li>
                     <li>@Html.ActionLink("Services", "Services", "Home")</li>
                     <li>@Html.ActionLink("Contact", "Contact", "Home")</li>
+                    <li>@Html.ActionLink("My Services","MyServices", "Home")</li>
                 </ul>
                 @Html.Partial("_LoginPartial")
             </div>
+}
+else
+{
+    <div class="navbar-collapse collapse">
+        <ul class="nav navbar-nav">
+            <li>@Html.ActionLink("Mission", "Mission", "Home")</li>
+            <li>@Html.ActionLink("Services", "Services", "Home")</li>
+            <li>@Html.ActionLink("Contact", "Contact", "Home")</li>
+        </ul>
+        @Html.Partial("_LoginPartial")
+    </div>
+}
         </div>
     </div>
     <div class="container body-content">
