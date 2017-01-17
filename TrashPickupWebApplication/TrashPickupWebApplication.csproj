@@ -200,6 +200,7 @@
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
     <Compile Include="Controllers\MyServicesController.cs" />
+    <Compile Include="Controllers\RegistrationController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -210,6 +211,30 @@
     <Compile Include="Migrations\201701171600158_SeedTableAndRadioButton.cs" />
     <Compile Include="Migrations\201701171600158_SeedTableAndRadioButton.Designer.cs">
       <DependentUpon>201701171600158_SeedTableAndRadioButton.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201701162302176_works.cs" />
+    <Compile Include="Migrations\201701162302176_works.Designer.cs">
+      <DependentUpon>201701162302176_works.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201701162309450_accountTypesMadeNullable.cs" />
+    <Compile Include="Migrations\201701162309450_accountTypesMadeNullable.Designer.cs">
+      <DependentUpon>201701162309450_accountTypesMadeNullable.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201701162318274_tryingToGetAddToWork.cs" />
+    <Compile Include="Migrations\201701162318274_tryingToGetAddToWork.Designer.cs">
+      <DependentUpon>201701162318274_tryingToGetAddToWork.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201701162330559_itWorked.cs" />
+    <Compile Include="Migrations\201701162330559_itWorked.Designer.cs">
+      <DependentUpon>201701162330559_itWorked.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201701162339241_willProbablyBreak.cs" />
+    <Compile Include="Migrations\201701162339241_willProbablyBreak.Designer.cs">
+      <DependentUpon>201701162339241_willProbablyBreak.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201701171604590_EmptyTables.cs" />
+    <Compile Include="Migrations\201701171604590_EmptyTables.Designer.cs">
+      <DependentUpon>201701171604590_EmptyTables.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\Address.cs" />
@@ -295,6 +320,7 @@
     <Content Include="Views\MyServices\ChangeMyServices.cshtml" />
     <Content Include="Views\MyServices\ChangeMyInfo.cshtml" />
     <Content Include="Views\MyServices\ViewMyBillView.cshtml" />
+    <Content Include="Views\Registration\ContactInfo.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -313,6 +339,24 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201701171600158_SeedTableAndRadioButton.resx">
       <DependentUpon>201701171600158_SeedTableAndRadioButton.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201701162302176_works.resx">
+      <DependentUpon>201701162302176_works.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201701162309450_accountTypesMadeNullable.resx">
+      <DependentUpon>201701162309450_accountTypesMadeNullable.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201701162318274_tryingToGetAddToWork.resx">
+      <DependentUpon>201701162318274_tryingToGetAddToWork.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201701162330559_itWorked.resx">
+      <DependentUpon>201701162330559_itWorked.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201701162339241_willProbablyBreak.resx">
+      <DependentUpon>201701162339241_willProbablyBreak.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201701171604590_EmptyTables.resx">
+      <DependentUpon>201701171604590_EmptyTables.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
