@@ -35,7 +35,7 @@ namespace TrashPickupWebApplication.Migrations
              );
             string line;
             int idCounter = 0;
-            System.IO.StreamReader file = new System.IO.StreamReader(@"..\..\SeedData\free-zipcode-database-Primary (1).txt");
+            System.IO.StreamReader file = new System.IO.StreamReader(@"SeedData\shortzips.txt");
             while ((line = file.ReadLine()) != null)
             {
                 idCounter++;
@@ -55,7 +55,7 @@ namespace TrashPickupWebApplication.Migrations
                 new Models.PickupIntervals { ID = 1, Frequency = "Once A Month" }
                 );
             idCounter = 0;
-            System.IO.StreamReader files = new System.IO.StreamReader(@"..\..\SeedData\wisconsinCities.txt");
+            System.IO.StreamReader files = new System.IO.StreamReader(@"SeedData\wisconsinCities.txt");
             while ((line = files.ReadLine()) != null)
             {
                 idCounter++;
@@ -64,7 +64,7 @@ namespace TrashPickupWebApplication.Migrations
                 );
             }
             idCounter = 0;
-            System.IO.StreamReader filed = new System.IO.StreamReader(@"..\..\SeedData\states.txt");
+            System.IO.StreamReader filed = new System.IO.StreamReader(@"SeedData\states.txt");
             while ((line = filed.ReadLine()) != null)
             {
                 idCounter++;

@@ -3,7 +3,7 @@ namespace TrashPickupWebApplication.Migrations
     using System;
     using System.Data.Entity.Migrations;
     
-    public partial class resetDatabase : DbMigration
+    public partial class rebuild : DbMigration
     {
         public override void Up()
         {
@@ -86,11 +86,7 @@ namespace TrashPickupWebApplication.Migrations
                 c => new
                     {
                         ID = c.Int(nullable: false, identity: true),
-                        Once = c.Int(nullable: false),
-                        EveryDay = c.Int(nullable: false),
-                        OnceAWeek = c.Int(nullable: false),
-                        EveryOtherWeek = c.Int(nullable: false),
-                        OnceAMonth = c.Int(nullable: false),
+                        Frequency = c.String(),
                     })
                 .PrimaryKey(t => t.ID);
             

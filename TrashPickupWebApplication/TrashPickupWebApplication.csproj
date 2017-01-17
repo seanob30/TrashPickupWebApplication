@@ -204,9 +204,13 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\201701171701157_resetDatabase.cs" />
-    <Compile Include="Migrations\201701171701157_resetDatabase.Designer.cs">
-      <DependentUpon>201701171701157_resetDatabase.cs</DependentUpon>
+    <Compile Include="Migrations\201701172115267_rebuild.cs" />
+    <Compile Include="Migrations\201701172115267_rebuild.Designer.cs">
+      <DependentUpon>201701172115267_rebuild.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201701172116343_seedingzips.cs" />
+    <Compile Include="Migrations\201701172116343_seedingzips.Designer.cs">
+      <DependentUpon>201701172116343_seedingzips.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountTypes.cs" />
@@ -306,8 +310,11 @@
     <Content Include="Scripts\jquery-1.10.2.min.map" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Migrations\201701171701157_resetDatabase.resx">
-      <DependentUpon>201701171701157_resetDatabase.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\201701172115267_rebuild.resx">
+      <DependentUpon>201701172115267_rebuild.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201701172116343_seedingzips.resx">
+      <DependentUpon>201701172116343_seedingzips.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
