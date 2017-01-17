@@ -17,5 +17,7 @@ namespace TrashPickupWebApplication.Models
         public int AccountTypeId { get; set; }
         public Address Address { get; set; }
         public int AddressId { get; set; }
+        public ApplicationUser ApplicationUser { get; set; }
+        public string ApplicationUserId { get; set; }
     }
 }
