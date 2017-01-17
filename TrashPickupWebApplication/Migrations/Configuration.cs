@@ -33,6 +33,27 @@ namespace TrashPickupWebApplication.Migrations
               new Models.Days { ID = 6, Day = "Friday" },
               new Models.Days { ID = 7, Day = "Saturday" }
             );
+            string line;
+            int idCounter = 0;
+            System.IO.StreamReader file = new System.IO.StreamReader(@"C:\Users\Jack\Desktop\free-zipcode-database-Primary (1).txt");
+            while ((line = file.ReadLine()) != null)
+            {
+                idCounter++;
+                context.ZipCode.AddOrUpdate(m => m.ID,
+                    new Models.ZipCode { ID = idCounter, Zipcodes = Int32.Parse(line) }
+                );
+            }
+            context.RegularServices.AddOrUpdate(m => m.ID,
+              new Models.RegularServices { ID = 1, ServiceName = "Trash Pickup", CostPerPickup = 15 },
+              new Models.RegularServices { ID = 1, ServiceName = "Recycling Pickup", CostPerPickup = 20 }
+              );
+            context.PickupIntervals.AddOrUpdate(m => m.ID,
+                new Models.PickupIntervals { ID = 1, Frequency = "Once" },
+                new Models.PickupIntervals { ID = 1, Frequency = "Every Day" },
+                new Models.PickupIntervals { ID = 1, Frequency = "Once A Week" },
+                new Models.PickupIntervals { ID = 1, Frequency = "Twice a month" },
+                new Models.PickupIntervals { ID = 1, Frequency = "Once A Month" }
+                );
         }
     }
 }
