@@ -17,9 +17,11 @@ namespace TrashPickupWebApplication.Controllers
     {
         private ApplicationSignInManager _signInManager;
         private ApplicationUserManager _userManager;
+        private ApplicationDbContext _context;
 
         public AccountController()
         {
+            _context = new ApplicationDbContext();
         }
 
         public AccountController(ApplicationUserManager userManager, ApplicationSignInManager signInManager )
@@ -153,7 +155,8 @@ namespace TrashPickupWebApplication.Controllers
             {
                 var user = new ApplicationUser { UserName = model.Email, Email = model.Email };
                 var info = new UserInfo();
-                
+                _context.UserInfo.Add(info);
+
                 var result = await UserManager.CreateAsync(user, model.Password);
                 if (result.Succeeded)
                 {

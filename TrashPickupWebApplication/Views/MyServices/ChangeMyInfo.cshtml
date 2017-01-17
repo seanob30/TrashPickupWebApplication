@@ -1,4 +1,4 @@
-﻿@model TrashPickupWebApplication.Models.UserInfo
+﻿@model TrashPickupWebApplication.ViewModels.ClientInfoViewModel
 @{
     ViewBag.Title = "ChangeMyInfo";
     Layout = "~/Views/Shared/_Layout.cshtml";
@@ -9,83 +9,79 @@
 <br />
 @using (Html.BeginForm("ChangeMyInfo", "MyServices"))
 {
-<div class="form-group">
-    @Html.LabelFor(m => m.FirstName, "First Name", new { @class = "col-md-2 control-label" })
-    <div class="col-md-10">
-        @Html.TextBoxFor(m => m.FirstName, "First Name", new { @class = "form-control" })
-        @Html.ValidationMessageFor(m => m.FirstName, "", new { @class = "text-danger" })
-    </div>
-</div>
-<br />
-<br />
-<br />
-<div class="form-group">
-    @Html.LabelFor(m => m.LastName, "Last Name", new { @class = "col-md-2 control-label" })
-    <div class="col-md-10">
-        @Html.TextBoxFor(m => m.LastName, new { @class = "form-control" })
-        @Html.ValidationMessageFor(m => m.LastName, "", new { @class = "text-danger" })
-    </div>
-</div>
-<br />
-<br />
-<div class="form-group">
-    @Html.LabelFor(m => m.Address.StreetAddress, "Street Address", new { @class = "col-md-2 control-label" })
-    <div class="col-md-10">
-        @Html.TextBoxFor(m => m.Address.StreetAddress, new { @class = "form-control" })
-        @Html.ValidationMessageFor(m => m.Address.StreetAddress, "", new { @class = "text-danger" })
-    </div>
-</div>
-<br />
-<br />
-<div class="form-group">
-     @Html.LabelFor(m => m.Address.City, "City", new { @class = "col-md-2 control-label" })
-     <div class="col-md-10">
-         @Html.TextBoxFor(m => m.Address.City, new { @class = "form-control" })
-         @Html.ValidationMessageFor(m => m.Address.City, "", new { @class = "text-danger" })
-     </div>
-</div>
-<br />
-<br />
     <div class="form-group">
-        @Html.LabelFor(m => m.Address.State, "State", new { @class = "col-md-2 control-label" })
+        @Html.LabelFor(m => m.User.FirstName, "First Name", new { @class = "col-md-2 control-label" })
         <div class="col-md-10">
-            @Html.TextBoxFor(m => m.Address.State, new { @class = "form-control" })
-            @Html.ValidationMessageFor(m => m.Address.State, "", new { @class = "text-danger" })
+            @Html.TextBoxFor(m => m.User.FirstName, "First Name", new { @class = "form-control" })
+            @Html.ValidationMessageFor(m => m.User.FirstName, "", new { @class = "text-danger" })
         </div>
     </div>
-<br />
-<br />
+    <br />
+    <br />
+    <br />
     <div class="form-group">
-        @Html.LabelFor(m => m.Address.Zipcode, "Zip Code", new { @class = "col-md-2 control-label" })
+        @Html.LabelFor(m => m.User.LastName, "Last Name", new { @class = "col-md-2 control-label" })
         <div class="col-md-10">
-            @Html.TextBoxFor(m => m.Address.Zipcode, new { @class = "form-control" })
-            @Html.ValidationMessageFor(m => m.Address.Zipcode, "", new { @class = "text-danger" })
+            @Html.TextBoxFor(m => m.User.LastName, new { @class = "form-control" })
+            @Html.ValidationMessageFor(m => m.User.LastName, "", new { @class = "text-danger" })
         </div>
     </div>
-<br />
-<br />
-<div class="editor-field">
-    @Html.LabelFor(m => m.AccountType.AccountType, "Account Type", new { @class = "col-md-2 control-label" })
-    @Html.RadioButtonFor(m => m.AccountType.AccountType, "Customer")
-    <label>Customer</label>
-    @Html.RadioButtonFor(m => m.AccountType.AccountType, "Employee") 
-    <label>Employee</label>
-    @Html.RadioButtonFor(m => m.AccountType.AccountType, "Administrator")
-    <label>Adminstrator</label>
-    @Html.ValidationMessageFor(m => m.AccountTypeId)
-</div>
-<br />
-<br />
-    @Html.HiddenFor(m => m.ID)
-    @Html.AntiForgeryToken()
-
-<div class="form-group">
-    <div class="col-md-offset-2 col-md-10">
-        <input type="submit" class="btn btn-default" value="Submit" />
+    <br />
+    <br />
+    <div class="form-group">
+        @Html.LabelFor(m => m.User.Address.StreetAddress, "Street Address", new { @class = "col-md-2 control-label" })
+        <div class="col-md-10">
+            @Html.TextBoxFor(m => m.User.Address.StreetAddress, new { @class = "form-control" })
+            @Html.ValidationMessageFor(m => m.User.Address.StreetAddress, "", new { @class = "text-danger" })
+        </div>
     </div>
-</div>
-}
-@section Scripts
+    <br />
+    <br />
+    <div class="form-group">
+        @Html.LabelFor(m => m.User.Address.City, "City", new { @class = "col-md-2 control-label" })
+        <div class="col-md-10">
+            @Html.DropDownListFor(m => m.User.Address.City, new SelectList(Model.City, "Cities"), "City", new { @class = "form-control" })
+            @Html.ValidationMessageFor(m => m.User.Address.City, "", new { @class = "text-danger" })
+        </div>
+    </div>
+    <br />
+    <br />
+    <div class="form-group">
+        @Html.LabelFor(m => m.State, "State", new { @class = "col-md-2 control-label" })
+        <div class="col-md-10">
+            @Html.DropDownListFor(m => m.State, new SelectList(Model.State, "State"), "State", new { @class = "form-control" })
+            @Html.ValidationMessageFor(m => m.State, "", new { @class = "text-danger" })
+        </div>
+    </div>
+    <br />
+    <br />
+    <div class="form-group">
+        @Html.LabelFor(m => m.ZipCode, "Zip Code", new { @class = "col-md-2 control-label" })
+        <div class="col-md-10">
+            @Html.DropDownListFor(m => m.ZipCode, new SelectList(Model.ZipCode, "ZipCode"), "Zipcode", new { @class = "form-control" })
+            @Html.ValidationMessageFor(m => m.ZipCode, "", new { @class = "text-danger" })
+        </div>
+    </div>
+    <br />
+    <br />
+    <div class="form-group">
+        @Html.LabelFor(m => m.AccountType, "Account Type", new { @class = "col-md-2 control-label" })
+        <div class="col-md-10">
+            @Html.DropDownListFor(m => m.AccountType, new SelectList(Model.AccountType, "AccountType"), "Choose your flavor", new { @class = "form-control" })
+            @Html.ValidationMessageFor(m => m.AccountType, "", new { @class = "text-danger" })
+        </div>
+    </div>
+    <br />
+    <br />
+    @Html.HiddenFor(m => m.User.ID)
+    @Html.AntiForgeryToken();
+    <div class="form-group">
+        <div class="col-md-offset-2 col-md-10">
+            <input type="submit" class="btn btn-default" value="Submit" />
+        </div>
+    </div>
+    }
+    @section Scripts
 {
-    @Scripts.Render("~/bundles/jqueryval")
-}
+        @Scripts.Render("~/bundles/jqueryval")
+    }

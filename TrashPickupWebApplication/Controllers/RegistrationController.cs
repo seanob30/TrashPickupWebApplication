@@ -25,12 +25,21 @@ namespace TrashPickupWebApplication.Controllers
         }
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult ContactInfo(UserInfo model)
+        public ActionResult ChangeMyInfo(UserInfo model)
         {
-            model.SignUpDate = DateTime.Now.ToString();
-            _context.UserInfo.Add(model);
+            ViewBag.AccountTypes = _context.AccountType.ToList();
+            if (model.ID == 0)
+            {
+                _context.UserInfo.Add(model);
+            }
+            else
+            {
+                var customerInDb = _context.UserInfo.Single(c => c.ID == model.ID);
+
+                TryUpdateModel(customerInDb);
+            }
             _context.SaveChanges();
-            return RedirectToAction("ServicesInfo", "Registration");
+            return RedirectToAction("MyServices", "Home");
         }
         public ActionResult ServicesInfo()
         {
