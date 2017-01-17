@@ -20,7 +20,7 @@ namespace TrashPickupWebApplication.Migrations
             //  to avoid creating duplicate seed data. E.g.
             //
             context.AccountType.AddOrUpdate(m => m.ID,
-              new Models.AccountTypes { ID = 1, AccountType = "Customer" },
+              //new Models.AccountTypes { ID = 1, AccountType = "Customer" },
               new Models.AccountTypes { ID = 1, AccountType = "Employee" },
               new Models.AccountTypes { ID = 1, AccountType = "Administrator" }
             );
