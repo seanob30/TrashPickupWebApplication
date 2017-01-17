@@ -29,7 +29,19 @@ namespace TrashPickupWebApplication.Controllers
         {
             model.SignUpDate = DateTime.Now.ToString();
             _context.UserInfo.Add(model);
+            _context.SaveChanges();
             return RedirectToAction("ServicesInfo", "Registration");
+        }
+        public ActionResult ServicesInfo()
+        {
+            return View();
+        }
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public ActionResult ServicesInfo(UserInfo model)
+        {
+
+            return RedirectToAction("PaymentInfo", "Registration");
         }
     }
 }

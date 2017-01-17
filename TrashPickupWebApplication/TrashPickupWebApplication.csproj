@@ -248,6 +248,10 @@
     <Compile Include="Migrations\201701162339241_willProbablyBreak.Designer.cs">
       <DependentUpon>201701162339241_willProbablyBreak.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201701171604590_EmptyTables.cs" />
+    <Compile Include="Migrations\201701171604590_EmptyTables.Designer.cs">
+      <DependentUpon>201701171604590_EmptyTables.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\Address.cs" />
     <Compile Include="Models\UserInfo.cs" />
@@ -378,6 +382,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201701162339241_willProbablyBreak.resx">
       <DependentUpon>201701162339241_willProbablyBreak.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201701171604590_EmptyTables.resx">
+      <DependentUpon>201701171604590_EmptyTables.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
