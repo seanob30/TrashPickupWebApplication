@@ -3,7 +3,7 @@ namespace TrashPickupWebApplication.Migrations
     using System;
     using System.Data.Entity.Migrations;
     
-    public partial class resetDatabase : DbMigration
+    public partial class TestForeignKey : DbMigration
     {
         public override void Up()
         {
@@ -20,21 +20,14 @@ namespace TrashPickupWebApplication.Migrations
                 "dbo.Addresses",
                 c => new
                     {
-                        ID = c.Int(nullable: false, identity: true),
-                        StreetAddressId = c.Int(nullable: false),
-                        CityId = c.Int(nullable: false),
-                        StateId = c.Int(nullable: false),
-                        ZipCodeId = c.Int(nullable: false),
+                        ID = c.Int(nullable: false),
                     })
                 .PrimaryKey(t => t.ID)
-                .ForeignKey("dbo.Cities", t => t.CityId, cascadeDelete: true)
-                .ForeignKey("dbo.States", t => t.StateId, cascadeDelete: true)
-                .ForeignKey("dbo.StreetAddresses", t => t.StreetAddressId, cascadeDelete: true)
-                .ForeignKey("dbo.ZipCodes", t => t.ZipCodeId, cascadeDelete: true)
-                .Index(t => t.StreetAddressId)
-                .Index(t => t.CityId)
-                .Index(t => t.StateId)
-                .Index(t => t.ZipCodeId);
+                .ForeignKey("dbo.Cities", t => t.ID)
+                .ForeignKey("dbo.States", t => t.ID)
+                .ForeignKey("dbo.StreetAddresses", t => t.ID)
+                .ForeignKey("dbo.ZipCodes", t => t.ID)
+                .Index(t => t.ID);
             
             CreateTable(
                 "dbo.Cities",
@@ -147,18 +140,15 @@ namespace TrashPickupWebApplication.Migrations
                 "dbo.UserInfoes",
                 c => new
                     {
-                        ID = c.Int(nullable: false, identity: true),
+                        ID = c.Int(nullable: false),
                         FirstName = c.String(),
                         LastName = c.String(),
                         SignUpDate = c.String(),
-                        AccountTypeId = c.Int(nullable: false),
-                        AddressId = c.Int(nullable: false),
                     })
                 .PrimaryKey(t => t.ID)
-                .ForeignKey("dbo.AccountTypes", t => t.AccountTypeId, cascadeDelete: true)
-                .ForeignKey("dbo.Addresses", t => t.AddressId, cascadeDelete: true)
-                .Index(t => t.AccountTypeId)
-                .Index(t => t.AddressId);
+                .ForeignKey("dbo.AccountTypes", t => t.ID)
+                .ForeignKey("dbo.Addresses", t => t.ID)
+                .Index(t => t.ID);
             
             CreateTable(
                 "dbo.AspNetUsers",
@@ -212,29 +202,25 @@ namespace TrashPickupWebApplication.Migrations
             DropForeignKey("dbo.AspNetUserRoles", "UserId", "dbo.AspNetUsers");
             DropForeignKey("dbo.AspNetUserLogins", "UserId", "dbo.AspNetUsers");
             DropForeignKey("dbo.AspNetUserClaims", "UserId", "dbo.AspNetUsers");
-            DropForeignKey("dbo.UserInfoes", "AddressId", "dbo.Addresses");
-            DropForeignKey("dbo.UserInfoes", "AccountTypeId", "dbo.AccountTypes");
+            DropForeignKey("dbo.UserInfoes", "ID", "dbo.Addresses");
+            DropForeignKey("dbo.UserInfoes", "ID", "dbo.AccountTypes");
             DropForeignKey("dbo.ScheduledServices", "ServiceTypeId_ID", "dbo.RegularServices");
             DropForeignKey("dbo.ScheduledServices", "ServiceIntervalId_ID", "dbo.PickupIntervals");
             DropForeignKey("dbo.AspNetUserRoles", "RoleId", "dbo.AspNetRoles");
-            DropForeignKey("dbo.Addresses", "ZipCodeId", "dbo.ZipCodes");
-            DropForeignKey("dbo.Addresses", "StreetAddressId", "dbo.StreetAddresses");
-            DropForeignKey("dbo.Addresses", "StateId", "dbo.States");
-            DropForeignKey("dbo.Addresses", "CityId", "dbo.Cities");
+            DropForeignKey("dbo.Addresses", "ID", "dbo.ZipCodes");
+            DropForeignKey("dbo.Addresses", "ID", "dbo.StreetAddresses");
+            DropForeignKey("dbo.Addresses", "ID", "dbo.States");
+            DropForeignKey("dbo.Addresses", "ID", "dbo.Cities");
             DropIndex("dbo.AspNetUserLogins", new[] { "UserId" });
             DropIndex("dbo.AspNetUserClaims", new[] { "UserId" });
             DropIndex("dbo.AspNetUsers", "UserNameIndex");
-            DropIndex("dbo.UserInfoes", new[] { "AddressId" });
-            DropIndex("dbo.UserInfoes", new[] { "AccountTypeId" });
+            DropIndex("dbo.UserInfoes", new[] { "ID" });
             DropIndex("dbo.ScheduledServices", new[] { "ServiceTypeId_ID" });
             DropIndex("dbo.ScheduledServices", new[] { "ServiceIntervalId_ID" });
             DropIndex("dbo.AspNetUserRoles", new[] { "RoleId" });
             DropIndex("dbo.AspNetUserRoles", new[] { "UserId" });
             DropIndex("dbo.AspNetRoles", "RoleNameIndex");
-            DropIndex("dbo.Addresses", new[] { "ZipCodeId" });
-            DropIndex("dbo.Addresses", new[] { "StateId" });
-            DropIndex("dbo.Addresses", new[] { "CityId" });
-            DropIndex("dbo.Addresses", new[] { "StreetAddressId" });
+            DropIndex("dbo.Addresses", new[] { "ID" });
             DropTable("dbo.AspNetUserLogins");
             DropTable("dbo.AspNetUserClaims");
             DropTable("dbo.AspNetUsers");
