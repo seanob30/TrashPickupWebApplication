@@ -200,6 +200,7 @@
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
     <Compile Include="Controllers\MyServicesController.cs" />
+    <Compile Include="Controllers\RegistrationController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -331,6 +332,7 @@
     <Content Include="Views\MyServices\ChangeMyServices.cshtml" />
     <Content Include="Views\MyServices\ChangeMyInfo.cshtml" />
     <Content Include="Views\MyServices\ViewMyBillView.cshtml" />
+    <Content Include="Views\Registration\ContactInfo.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
