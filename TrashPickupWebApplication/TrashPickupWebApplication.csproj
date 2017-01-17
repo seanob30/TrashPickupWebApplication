@@ -204,42 +204,14 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\201701171509097_AlterChangeInfoPage.cs" />
-    <Compile Include="Migrations\201701171509097_AlterChangeInfoPage.Designer.cs">
-      <DependentUpon>201701171509097_AlterChangeInfoPage.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201701171600158_SeedTableAndRadioButton.cs" />
-    <Compile Include="Migrations\201701171600158_SeedTableAndRadioButton.Designer.cs">
-      <DependentUpon>201701171600158_SeedTableAndRadioButton.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201701162302176_works.cs" />
-    <Compile Include="Migrations\201701162302176_works.Designer.cs">
-      <DependentUpon>201701162302176_works.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201701162309450_accountTypesMadeNullable.cs" />
-    <Compile Include="Migrations\201701162309450_accountTypesMadeNullable.Designer.cs">
-      <DependentUpon>201701162309450_accountTypesMadeNullable.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201701162318274_tryingToGetAddToWork.cs" />
-    <Compile Include="Migrations\201701162318274_tryingToGetAddToWork.Designer.cs">
-      <DependentUpon>201701162318274_tryingToGetAddToWork.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201701162330559_itWorked.cs" />
-    <Compile Include="Migrations\201701162330559_itWorked.Designer.cs">
-      <DependentUpon>201701162330559_itWorked.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201701162339241_willProbablyBreak.cs" />
-    <Compile Include="Migrations\201701162339241_willProbablyBreak.Designer.cs">
-      <DependentUpon>201701162339241_willProbablyBreak.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201701171604590_EmptyTables.cs" />
-    <Compile Include="Migrations\201701171604590_EmptyTables.Designer.cs">
-      <DependentUpon>201701171604590_EmptyTables.cs</DependentUpon>
+    <Compile Include="Migrations\201701171701157_resetDatabase.cs" />
+    <Compile Include="Migrations\201701171701157_resetDatabase.Designer.cs">
+      <DependentUpon>201701171701157_resetDatabase.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
+    <Compile Include="Models\AccountTypes.cs" />
     <Compile Include="Models\Address.cs" />
     <Compile Include="Models\UserInfo.cs" />
-    <Compile Include="Models\AccountTypes.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\City.cs" />
     <Compile Include="Models\Days.cs" />
@@ -334,29 +306,8 @@
     <Content Include="Scripts\jquery-1.10.2.min.map" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Migrations\201701171509097_AlterChangeInfoPage.resx">
-      <DependentUpon>201701171509097_AlterChangeInfoPage.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201701171600158_SeedTableAndRadioButton.resx">
-      <DependentUpon>201701171600158_SeedTableAndRadioButton.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201701162302176_works.resx">
-      <DependentUpon>201701162302176_works.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201701162309450_accountTypesMadeNullable.resx">
-      <DependentUpon>201701162309450_accountTypesMadeNullable.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201701162318274_tryingToGetAddToWork.resx">
-      <DependentUpon>201701162318274_tryingToGetAddToWork.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201701162330559_itWorked.resx">
-      <DependentUpon>201701162330559_itWorked.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201701162339241_willProbablyBreak.resx">
-      <DependentUpon>201701162339241_willProbablyBreak.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201701171604590_EmptyTables.resx">
-      <DependentUpon>201701171604590_EmptyTables.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\201701171701157_resetDatabase.resx">
+      <DependentUpon>201701171701157_resetDatabase.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

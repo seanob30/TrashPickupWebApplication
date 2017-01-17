@@ -21,8 +21,8 @@ namespace TrashPickupWebApplication.Migrations
             //
             context.AccountType.AddOrUpdate(m => m.ID,
               new Models.AccountTypes { ID = 1, AccountType = "Customer" },
-              new Models.AccountTypes { ID = 1, AccountType = "Employee" },
-              new Models.AccountTypes { ID = 1, AccountType = "Administrator" }
+              new Models.AccountTypes { ID = 2, AccountType = "Employee" },
+              new Models.AccountTypes { ID = 3, AccountType = "Administrator" }
             );
         }
     }
