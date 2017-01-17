@@ -3,7 +3,7 @@ namespace TrashPickupWebApplication.Migrations
     using System;
     using System.Data.Entity.Migrations;
     
-    public partial class addedViewModel : DbMigration
+    public partial class seedingzips : DbMigration
     {
         public override void Up()
         {

@@ -1,0 +1,190 @@
+Abbotsford
+Adams
+Algoma
+Alma
+Altoona
+Amery
+Antigo
+Appleton
+Arcadia
+Ashland
+Augusta
+Baraboo
+Barron
+Bayfield
+Beaver Dam
+Beloit
+Berlin
+Black River Falls
+Blair
+Bloomer
+Boscobel
+Brillion
+Brodhead
+Brookfield
+Buffalo City
+Burlington
+Cedarburg
+Chetek
+Chilton
+Chippewa Falls
+Clintonville
+Colby
+Columbus
+Cornell
+Crandon
+Cuba City
+Cudahy
+Cumberland
+Darlington
+Delafield
+Delavan
+De Pere
+Dodgeville
+Durand
+Eagle River
+Eau Claire
+Edgerton
+Elkhorn
+Elroy
+Evansville
+Fennimore
+Fitchburg
+Fond du Lac
+Fort Atkinson
+Fountain City
+Fox Lake
+Franklin
+Galesville
+Gillett
+Glendale
+Glenwood City
+Green Bay
+Greenfield
+Green Lake
+Greenwood
+Hartford
+Hayward
+Hillsboro
+Horicon
+Hudson
+Hurley
+Independence
+Janesville
+Jefferson
+Juneau
+Kaukauna
+Kenosha
+Kewaunee
+Kiel
+La Crosse
+Ladysmith
+Lake Geneva
+Lake Mills
+Lancaster
+Lodi
+Loyal
+Madison
+Manawa
+Manitowoc
+Marinette
+Marion
+Markesan
+Marshfield
+Mauston
+Mayville
+Medford
+Mellen
+Menasha
+Menomonie
+Mequon
+Merrill
+Middleton
+Milton
+Milwaukee
+Mineral Point
+Mondovi
+Monona
+Monroe
+Montello
+Montreal
+Mosinee
+Muskego
+Neenah
+Neillsville
+Nekoosa
+New Berlin
+New Holstein
+New Lisbon
+New London
+New Richmond
+Niagara
+Oak Creek
+Oconomowoc
+Oconto
+Oconto Falls
+Omro
+Onalaska
+Oshkosh
+Osseo
+Owen
+Park Falls
+Peshtigo
+Pewaukee
+Phillips
+Pittsville
+Platteville
+Plymouth
+Port Washington
+Portage
+Prairie du Chien
+Prescott
+Princeton
+Racine
+Reedsburg
+Rhinelander
+Rice Lake
+Richland Center
+Ripon
+River Falls
+St. Croix Falls
+St. Francis
+Schofield
+Seymour
+Shawano
+Sheboygan
+Sheboygan Falls
+Shell Lake
+Shullsburg
+South Milwaukee
+Sparta
+Spooner
+Stanley
+Stevens Point
+Stoughton
+Sturgeon Bay
+Sun Prairie
+Superior
+Thorp
+Tomah
+Tomahawk
+Two Rivers
+Verona
+Viroqua
+Washburn
+Waterloo
+Watertown
+Waukesha
+Waupaca
+Waupun
+Wausau
+Wautoma
+Wauwatosa
+West Allis
+West Bend
+Westby
+Weyauwega
+Whitehall
+Whitewater
+Wisconsin Dells
+Wisconsin Rapids

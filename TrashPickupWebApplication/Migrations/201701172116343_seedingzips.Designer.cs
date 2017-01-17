@@ -7,13 +7,13 @@ namespace TrashPickupWebApplication.Migrations
     using System.Resources;
     
     [GeneratedCode("EntityFramework.Migrations", "6.1.3-40302")]
-    public sealed partial class AlterForeignKey3 : IMigrationMetadata
+    public sealed partial class seedingzips : IMigrationMetadata
     {
-        private readonly ResourceManager Resources = new ResourceManager(typeof(AlterForeignKey3));
+        private readonly ResourceManager Resources = new ResourceManager(typeof(seedingzips));
         
         string IMigrationMetadata.Id
         {
-            get { return "201701171801522_AlterForeignKey3"; }
+            get { return "201701172116343_seedingzips"; }
         }
         
         string IMigrationMetadata.Source

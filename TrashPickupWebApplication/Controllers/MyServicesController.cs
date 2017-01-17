@@ -31,17 +31,7 @@ namespace TrashPickupWebApplication.Controllers
         [ValidateAntiForgeryToken]
         public ActionResult ChangeMyInfo(UserInfo model)
         {
-            ViewBag.AccountTypes = _context.AccountType.ToList();
-            if (model.ID == 0)
-            {
-                _context.UserInfo.Add(model);
-            }
-            else
-            {
-                var customerInDb = _context.UserInfo.Single(c => c.ID == model.ID);
-
-                TryUpdateModel(customerInDb);
-            }
+            _context.UserInfo.Add(model);
             _context.SaveChanges();
             return RedirectToAction("MyServices", "Home");
         }
