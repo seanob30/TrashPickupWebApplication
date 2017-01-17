@@ -203,29 +203,13 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\201701132324369_InitialMigration.cs" />
-    <Compile Include="Migrations\201701132324369_InitialMigration.Designer.cs">
-      <DependentUpon>201701132324369_InitialMigration.cs</DependentUpon>
+    <Compile Include="Migrations\201701171509097_AlterChangeInfoPage.cs" />
+    <Compile Include="Migrations\201701171509097_AlterChangeInfoPage.Designer.cs">
+      <DependentUpon>201701171509097_AlterChangeInfoPage.cs</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\201701161637068_ServicesIntervalsDaysScheduledservides.cs" />
-    <Compile Include="Migrations\201701161637068_ServicesIntervalsDaysScheduledservides.Designer.cs">
-      <DependentUpon>201701161637068_ServicesIntervalsDaysScheduledservides.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201701161641187_ContextForServices.cs" />
-    <Compile Include="Migrations\201701161641187_ContextForServices.Designer.cs">
-      <DependentUpon>201701161641187_ContextForServices.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201701161742255_UserInfoAddressAndContextAdded.cs" />
-    <Compile Include="Migrations\201701161742255_UserInfoAddressAndContextAdded.Designer.cs">
-      <DependentUpon>201701161742255_UserInfoAddressAndContextAdded.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201701161807458_somethingMightBeWrong.cs" />
-    <Compile Include="Migrations\201701161807458_somethingMightBeWrong.Designer.cs">
-      <DependentUpon>201701161807458_somethingMightBeWrong.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201701161826010_IThinkIMightHaveFixedIt.cs" />
-    <Compile Include="Migrations\201701161826010_IThinkIMightHaveFixedIt.Designer.cs">
-      <DependentUpon>201701161826010_IThinkIMightHaveFixedIt.cs</DependentUpon>
+    <Compile Include="Migrations\201701171600158_SeedTableAndRadioButton.cs" />
+    <Compile Include="Migrations\201701171600158_SeedTableAndRadioButton.Designer.cs">
+      <DependentUpon>201701171600158_SeedTableAndRadioButton.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\Address.cs" />
@@ -324,23 +308,11 @@
     <Content Include="Scripts\jquery-1.10.2.min.map" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Migrations\201701132324369_InitialMigration.resx">
-      <DependentUpon>201701132324369_InitialMigration.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\201701171509097_AlterChangeInfoPage.resx">
+      <DependentUpon>201701171509097_AlterChangeInfoPage.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201701161637068_ServicesIntervalsDaysScheduledservides.resx">
-      <DependentUpon>201701161637068_ServicesIntervalsDaysScheduledservides.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201701161641187_ContextForServices.resx">
-      <DependentUpon>201701161641187_ContextForServices.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201701161742255_UserInfoAddressAndContextAdded.resx">
-      <DependentUpon>201701161742255_UserInfoAddressAndContextAdded.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201701161807458_somethingMightBeWrong.resx">
-      <DependentUpon>201701161807458_somethingMightBeWrong.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201701161826010_IThinkIMightHaveFixedIt.resx">
-      <DependentUpon>201701161826010_IThinkIMightHaveFixedIt.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\201701171600158_SeedTableAndRadioButton.resx">
+      <DependentUpon>201701171600158_SeedTableAndRadioButton.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

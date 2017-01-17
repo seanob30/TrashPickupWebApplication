@@ -7,13 +7,13 @@ namespace TrashPickupWebApplication.Migrations
     using System.Resources;
     
     [GeneratedCode("EntityFramework.Migrations", "6.1.3-40302")]
-    public sealed partial class UserInfoAddressAndContextAdded : IMigrationMetadata
+    public sealed partial class SeedTableAndRadioButton : IMigrationMetadata
     {
-        private readonly ResourceManager Resources = new ResourceManager(typeof(UserInfoAddressAndContextAdded));
+        private readonly ResourceManager Resources = new ResourceManager(typeof(SeedTableAndRadioButton));
         
         string IMigrationMetadata.Id
         {
-            get { return "201701161742255_UserInfoAddressAndContextAdded"; }
+            get { return "201701171600158_SeedTableAndRadioButton"; }
         }
         
         string IMigrationMetadata.Source

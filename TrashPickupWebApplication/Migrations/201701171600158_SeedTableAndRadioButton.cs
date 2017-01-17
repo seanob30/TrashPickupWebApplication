@@ -3,7 +3,7 @@ namespace TrashPickupWebApplication.Migrations
     using System;
     using System.Data.Entity.Migrations;
     
-    public partial class ServicesIntervalsDaysScheduledservides : DbMigration
+    public partial class SeedTableAndRadioButton : DbMigration
     {
         public override void Up()
         {

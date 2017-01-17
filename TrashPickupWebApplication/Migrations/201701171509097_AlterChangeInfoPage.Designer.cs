@@ -7,13 +7,13 @@ namespace TrashPickupWebApplication.Migrations
     using System.Resources;
     
     [GeneratedCode("EntityFramework.Migrations", "6.1.3-40302")]
-    public sealed partial class ServicesIntervalsDaysScheduledservides : IMigrationMetadata
+    public sealed partial class AlterChangeInfoPage : IMigrationMetadata
     {
-        private readonly ResourceManager Resources = new ResourceManager(typeof(ServicesIntervalsDaysScheduledservides));
+        private readonly ResourceManager Resources = new ResourceManager(typeof(AlterChangeInfoPage));
         
         string IMigrationMetadata.Id
         {
-            get { return "201701161637068_ServicesIntervalsDaysScheduledservides"; }
+            get { return "201701171509097_AlterChangeInfoPage"; }
         }
         
         string IMigrationMetadata.Source

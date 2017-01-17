@@ -9,6 +9,11 @@ namespace TrashPickupWebApplication.Controllers
 {
     public class MyServicesController : Controller
     {
+        private ApplicationDbContext _context;
+        public MyServicesController()
+        {
+            _context = new ApplicationDbContext();
+        }
         // GET: MyServices
         public ActionResult Index()
         {
@@ -24,14 +29,11 @@ namespace TrashPickupWebApplication.Controllers
         }
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult ChangeMyInfo([Bind(Include = "FirstName,LastName")] UserInfo UserInfo )
+        public ActionResult ChangeMyInfo(UserInfo model)
         {
-            if (ModelState.IsValid)
-            {
-                UserInfo.FirstName = "FirstName";
-                UserInfo.LastName = "LastName";
-            }
-            return View("Index");
+            _context.UserInfo.Add(model);
+            _context.SaveChanges();
+            return RedirectToAction("MyServices", "Home");
         }
         public ActionResult ViewMyBill()
         {
