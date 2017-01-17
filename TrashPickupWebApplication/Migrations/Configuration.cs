@@ -24,15 +24,15 @@ namespace TrashPickupWebApplication.Migrations
               new Models.AccountTypes { ID = 2, AccountType = "Employee" },
               new Models.AccountTypes { ID = 3, AccountType = "Administrator" }
               );
-           context.Days.AddOrUpdate(m =>m.ID,
-              new Models.Days {  ID = 1 , Day = "Sunday"},
-              new Models.Days { ID = 2, Day = "Monday" },
-              new Models.Days { ID = 3, Day = "Tuesday" },
-              new Models.Days { ID = 4, Day = "Wednesday" },
-              new Models.Days { ID = 5, Day = "Thursday" },
-              new Models.Days { ID = 6, Day = "Friday" },
-              new Models.Days { ID = 7, Day = "Saturday" }
-            );
+            context.Days.AddOrUpdate(m => m.ID,
+               new Models.Days { ID = 1, Day = "Sunday" },
+               new Models.Days { ID = 2, Day = "Monday" },
+               new Models.Days { ID = 3, Day = "Tuesday" },
+               new Models.Days { ID = 4, Day = "Wednesday" },
+               new Models.Days { ID = 5, Day = "Thursday" },
+               new Models.Days { ID = 6, Day = "Friday" },
+               new Models.Days { ID = 7, Day = "Saturday" }
+             );
             string line;
             int idCounter = 0;
             System.IO.StreamReader file = new System.IO.StreamReader(@"C:\Users\Jack\Desktop\free-zipcode-database-Primary (1).txt");
@@ -54,6 +54,24 @@ namespace TrashPickupWebApplication.Migrations
                 new Models.PickupIntervals { ID = 1, Frequency = "Twice a month" },
                 new Models.PickupIntervals { ID = 1, Frequency = "Once A Month" }
                 );
+            idCounter = 0;
+            System.IO.StreamReader files = new System.IO.StreamReader(@"C:\Users\Jack\Desktop\wisconsinCities.txt");
+            while ((line = files.ReadLine()) != null)
+            {
+                idCounter++;
+                context.City.AddOrUpdate(m => m.ID,
+                    new Models.City { ID = idCounter, Cities = line }
+                );
+            }
+            idCounter = 0;
+            System.IO.StreamReader filed = new System.IO.StreamReader(@"C:\Users\Jack\Desktop\states.txt");
+            while ((line = filed.ReadLine()) != null)
+            {
+                idCounter++;
+                context.State.AddOrUpdate(m => m.ID,
+                    new Models.State { ID = idCounter, States = line }
+                );
+            }
         }
     }
 }
