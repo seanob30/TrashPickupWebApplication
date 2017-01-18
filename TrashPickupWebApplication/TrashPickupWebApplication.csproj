@@ -226,6 +226,8 @@
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountTypes.cs" />
+    <Compile Include="Models\CardTypes.cs" />
+    <Compile Include="Models\PaymentInformation.cs" />
     <Compile Include="ViewModels\AccountViewModels.cs" />
     <Compile Include="Models\City.cs" />
     <Compile Include="Models\Days.cs" />
