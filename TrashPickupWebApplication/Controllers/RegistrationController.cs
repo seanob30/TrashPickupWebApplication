@@ -59,5 +59,15 @@ namespace TrashPickupWebApplication.Controllers
 
             return RedirectToAction("PaymentInfo", "Registration");
         }
+        public ActionResult PaymentInfo()
+        {
+            return View();
+        }
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public ActionResult PaymentInfo(UserInfo model)
+        {
+            return RedirectToAction("Index", "MyServices");
+        }
     }
 }

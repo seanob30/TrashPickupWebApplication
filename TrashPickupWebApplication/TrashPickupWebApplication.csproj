@@ -199,6 +199,7 @@
     <Compile Include="Controllers\ChangeMyServicesController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
+    <Compile Include="Controllers\MyRoutesController.cs" />
     <Compile Include="Controllers\MyServicesController.cs" />
     <Compile Include="Controllers\RegistrationController.cs" />
     <Compile Include="Global.asax.cs">
@@ -305,6 +306,9 @@
     <Content Include="Views\MyServices\ChangeMyInfo.cshtml" />
     <Content Include="Views\MyServices\ViewMyBillView.cshtml" />
     <Content Include="Views\Registration\ContactInfo.cshtml" />
+    <Content Include="Views\Registration\ServicesInfo.cshtml" />
+    <Content Include="Views\Registration\PaymentInfo.cshtml" />
+    <Content Include="Views\MyRoutes\MyRoute.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
