@@ -57,6 +57,12 @@ namespace TrashPickupWebApplication.Migrations
                 new Models.State { ID = 8, States = "Missouri" },
                 new Models.State { ID = 9, States = "North Dakota" }
                 );
+            context.CardType.AddOrUpdate(m => m.ID,
+                new Models.CardTypes { ID = 1, CardName = "Visa" },
+                new Models.CardTypes { ID = 2, CardName = "Master Card" },
+                new Models.CardTypes { ID = 3, CardName = "Discover" },
+                new Models.CardTypes { ID = 4, CardName = "American Express" }
+                );
         }
     }
 }

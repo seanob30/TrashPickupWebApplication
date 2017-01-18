@@ -224,6 +224,10 @@
     <Compile Include="Migrations\201701182041282_AddAndAlterServicesModel.Designer.cs">
       <DependentUpon>201701182041282_AddAndAlterServicesModel.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201701182204033_AddedPaymentTypesAndSeededCardTypes.cs" />
+    <Compile Include="Migrations\201701182204033_AddedPaymentTypesAndSeededCardTypes.Designer.cs">
+      <DependentUpon>201701182204033_AddedPaymentTypesAndSeededCardTypes.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountTypes.cs" />
     <Compile Include="Models\CardTypes.cs" />
@@ -342,6 +346,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201701182041282_AddAndAlterServicesModel.resx">
       <DependentUpon>201701182041282_AddAndAlterServicesModel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201701182204033_AddedPaymentTypesAndSeededCardTypes.resx">
+      <DependentUpon>201701182204033_AddedPaymentTypesAndSeededCardTypes.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

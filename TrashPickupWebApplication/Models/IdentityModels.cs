@@ -20,9 +20,11 @@ namespace TrashPickupWebApplication.Models
         public int StateId { get; set; }
         public ZipCode ZipCode { get; set; }
         public int ZipCodeId { get; set; }
-        
+        public PaymentInformation PaymentInformation { get; set; }
+        public int PaymentInformationId { get; set; }
 
-        public async Task<ClaimsIdentity> GenerateUserIdentityAsync(UserManager<ApplicationUser> manager)
+
+    public async Task<ClaimsIdentity> GenerateUserIdentityAsync(UserManager<ApplicationUser> manager)
         {
             // Note the authenticationType must match the one defined in CookieAuthenticationOptions.AuthenticationType
             var userIdentity = await manager.CreateIdentityAsync(this, DefaultAuthenticationTypes.ApplicationCookie);
@@ -31,7 +33,7 @@ namespace TrashPickupWebApplication.Models
         }
     }
 
-    public class ApplicationDbContext : IdentityDbContext<ApplicationUser>
+    public class ApplicationDbContext : IdentityDbContext
     {
         public DbSet<ApplicationUser> ApplicationUser { get; set; }
         public DbSet<StreetAddress> StreetAddress { get; set; }
@@ -43,9 +45,11 @@ namespace TrashPickupWebApplication.Models
         public DbSet<RegularServices> RegularServices { get; set; }
         public DbSet<ScheduledServices> ScheduledServices { get; set; }
         public DbSet<AccountTypes> AccountType { get; set; }
+        public DbSet<CardTypes> CardType { get; set; }
+        public DbSet<PaymentInformation> PaymentInformation { get; set; }
 
         public ApplicationDbContext()
-            : base("DefaultConnection", throwIfV1Schema: false)
+            //: base("DefaultConnection", throwIfV1Schema: false)
         {
         }
         public static ApplicationDbContext Create()
