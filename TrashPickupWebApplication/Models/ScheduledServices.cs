@@ -11,7 +11,7 @@ namespace TrashPickupWebApplication.Models
     {
         [Key]
         public int ID { get; set; }
-        public string SeceduledUser { get; set; }
+        public string ScheduledUser { get; set; }
         public RegularServices ServiceTypeId { get; set; }
         public int ServiceTypeID { get; set; }
         public PickupIntervals ServiceIntervalId { get; set; }

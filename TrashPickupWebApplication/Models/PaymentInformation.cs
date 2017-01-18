@@ -18,5 +18,6 @@ namespace TrashPickupWebApplication.Models
         public int CCVCode { get; set; }
         public string NameOnCard { get; set; }
         public int ZipcodeOnCard { get; set; }
+        public string CustomerName { get; set; }
     }
 }

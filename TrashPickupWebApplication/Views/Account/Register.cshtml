@@ -50,25 +50,25 @@
     <div class="form-group">
         @Html.LabelFor(m => m.ApplicationUser.CityId, "City", new { @class = "col-md-2 control-label" })
         <div class="col-md-10">
-            @Html.DropDownListFor(m => m.ApplicationUser.CityId, new SelectList(Model.CitiesList, "ID", "Cities"), "Account Type", new { @class = "form-control" })
+            @Html.DropDownListFor(m => m.ApplicationUser.CityId, new SelectList(Model.CitiesList, "ID", "Cities"), "", new { @class = "form-control" })
         </div>
     </div>
     <div class="form-group">
         @Html.LabelFor(m => m.ApplicationUser.StateId, "State", new { @class = "col-md-2 control-label" })
         <div class="col-md-10">
-            @Html.DropDownListFor(m => m.ApplicationUser.StateId, new SelectList(Model.StatesList, "ID", "States"), "Account Type", new { @class = "form-control" })
+            @Html.DropDownListFor(m => m.ApplicationUser.StateId, new SelectList(Model.StatesList, "ID", "States"), "", new { @class = "form-control" })
         </div>
     </div>
     <div class="form-group">
         @Html.LabelFor(m => m.ApplicationUser.ZipCodeId, "Zipcode", new { @class = "col-md-2 control-label" })
         <div class="col-md-10">
-            @Html.DropDownListFor(m => m.ApplicationUser.ZipCodeId, new SelectList(Model.ZipCodesList, "ID", "Zipcodes"), "Account Type", new { @class = "form-control" })
+            @Html.DropDownListFor(m => m.ApplicationUser.ZipCodeId, new SelectList(Model.ZipCodesList, "ID", "Zipcodes"), "", new { @class = "form-control" })
         </div>
     </div>
     <div class="form-group">
         @Html.LabelFor(m => m.ApplicationUser.AccountTypeId, "Account Type", new { @class = "col-md-2 control-label" })
         <div class="col-md-10">
-            @Html.DropDownListFor(m => m.ApplicationUser.AccountTypeId, new SelectList(Model.AccountTypesList, "ID", "AccountType"), "Account Type", new { @class = "form-control" })
+            @Html.DropDownListFor(m => m.ApplicationUser.AccountTypeId, new SelectList(Model.AccountTypesList, "ID", "AccountType"), "", new { @class = "form-control" })
         </div>
     </div>
     <div class="form-group">
