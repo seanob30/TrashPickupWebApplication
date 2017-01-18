@@ -12,12 +12,10 @@ namespace TrashPickupWebApplication.Controllers
     {
         ApplicationDbContext _context;
         AccountTypes _accountTypes;
-        UserInfo _userInfo;
         public RegistrationController()
         {
             _context = new ApplicationDbContext();
             _accountTypes = new AccountTypes();
-            _userInfo = new UserInfo();
         }
         // GET: Registration
         public ActionResult Index()
@@ -36,9 +34,7 @@ namespace TrashPickupWebApplication.Controllers
         {
             if (model.User.ID == 0)
             {
-                _userInfo.Address = model.Address;
-                _userInfo.FirstName = model.User.FirstName;
-                _userInfo.LastName = model.User.LastName;
+
             }
             else
             {
