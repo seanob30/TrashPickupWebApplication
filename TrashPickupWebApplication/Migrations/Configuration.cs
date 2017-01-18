@@ -14,18 +14,15 @@ namespace TrashPickupWebApplication.Migrations
 
         protected override void Seed(TrashPickupWebApplication.Models.ApplicationDbContext context)
         {
-            //  This method will be called after migrating to the latest version.
-
-            //  You can use the DbSet<T>.AddOrUpdate() helper extension method 
-            //  to avoid creating duplicate seed data. E.g.
-            //
-            //    context.People.AddOrUpdate(
-            //      p => p.FullName,
-            //      new Person { FullName = "Andrew Peters" },
-            //      new Person { FullName = "Brice Lambson" },
-            //      new Person { FullName = "Rowan Miller" }
-            //    );
-            //
+            context.Days.AddOrUpdate(m => m.ID,
+                 new Models.Days { ID = 1, Day = "Sunday" },
+                 new Models.Days { ID = 1, Day = "Monday" },
+                 new Models.Days { ID = 2, Day = "Tuesday" },
+                 new Models.Days { ID = 3, Day = "Wednesday" },
+                 new Models.Days { ID = 4, Day = "Thursday" },
+                 new Models.Days { ID = 5, Day = "Friday" },
+                 new Models.Days { ID = 6, Day = "Saturday" }
+                 );
         }
     }
 }

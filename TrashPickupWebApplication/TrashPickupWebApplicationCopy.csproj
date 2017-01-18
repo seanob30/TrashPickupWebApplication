@@ -220,6 +220,10 @@
     <Compile Include="Migrations\201701181723183_AddedApplicationUserToViewModel.Designer.cs">
       <DependentUpon>201701181723183_AddedApplicationUserToViewModel.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201701181833223_SeedDays.cs" />
+    <Compile Include="Migrations\201701181833223_SeedDays.Designer.cs">
+      <DependentUpon>201701181833223_SeedDays.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountTypes.cs" />
     <Compile Include="ViewModels\AccountViewModels.cs" />
@@ -328,6 +332,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201701181723183_AddedApplicationUserToViewModel.resx">
       <DependentUpon>201701181723183_AddedApplicationUserToViewModel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201701181833223_SeedDays.resx">
+      <DependentUpon>201701181833223_SeedDays.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
