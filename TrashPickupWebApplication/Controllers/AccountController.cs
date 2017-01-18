@@ -141,7 +141,19 @@ namespace TrashPickupWebApplication.Controllers
         [AllowAnonymous]
         public ActionResult Register()
         {
-            return View();
+            var accountTypes = _context.AccountType.ToList();
+            var cities = _context.City.ToList();
+            var states = _context.State.ToList();
+            var zipcodes = _context.ZipCode.ToList();
+
+            var viewModel = new RegisterViewModel()
+            {
+                CitiesList = cities,
+                StatesList = states,
+                ZipCodesList = zipcodes,
+                AccountTypesList = accountTypes
+            };
+            return View(viewModel);
         }
 
         //
@@ -153,11 +165,20 @@ namespace TrashPickupWebApplication.Controllers
         {
             if (ModelState.IsValid)
             {
-                var user = new ApplicationUser { UserName = model.Email, Email = model.Email };
-                var info = new UserInfo();
-                info.ApplicationUserId = user.Id;
-                
+                var user = new ApplicationUser
+                {
+                    UserName = model.Email,
+                    Email = model.Email,
+                    FirstName = model.FirstName,
+                    LastName = model.LastName,
+                    AccountTypeId = model.ApplicationUser.AccountTypeId,
+                    StreetAddress = model.StreetAddress,
+                    CityId = model.ApplicationUser.CityId,
+                    StateId = model.ApplicationUser.StateId,
+                    ZipCodeId = model.ApplicationUser.ZipCodeId
 
+                };
+                
                 var result = await UserManager.CreateAsync(user, model.Password);
                 if (result.Succeeded)
                 {
@@ -169,7 +190,7 @@ namespace TrashPickupWebApplication.Controllers
                     // var callbackUrl = Url.Action("ConfirmEmail", "Account", new { userId = user.Id, code = code }, protocol: Request.Url.Scheme);
                     // await UserManager.SendEmailAsync(user.Id, "Confirm your account", "Please confirm your account by clicking <a href=\"" + callbackUrl + "\">here</a>");
 
-                    return RedirectToAction("ContactInfo", "Registration");
+                    return RedirectToAction("Index", "Home");
                 }
                 AddErrors(result);
             }

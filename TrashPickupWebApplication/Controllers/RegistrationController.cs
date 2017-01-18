@@ -39,7 +39,7 @@ namespace TrashPickupWebApplication.Controllers
             else
             {
                 var customerInDb = _context.UserInfo.Single(c => c.ID == model.User.ID);
-
+                
                 TryUpdateModel(customerInDb);
             }
             return RedirectToAction("MyServices", "Home");

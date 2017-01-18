@@ -36,7 +36,7 @@ namespace TrashPickupWebApplication.Controllers
         {
             ViewBag.Message = "A list of our services.";
 
-            return View(_db.Address.ToList());
+            return View();
         }
         public ActionResult MyServices()
         {
