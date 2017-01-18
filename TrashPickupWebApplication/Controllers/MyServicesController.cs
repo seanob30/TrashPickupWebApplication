@@ -9,6 +9,12 @@ namespace TrashPickupWebApplication.Controllers
 {
     public class MyServicesController : Controller
     {
+        private ApplicationDbContext _context;
+
+        public MyServicesController()
+        {
+            _context = new ApplicationDbContext();
+        }
         // GET: MyServices
         public ActionResult Index()
         {
@@ -16,7 +22,14 @@ namespace TrashPickupWebApplication.Controllers
         }
         public ActionResult ChangeMyInfo()
         {
-            return View();
+            var currentUserName = User.Identity.Name;
+            var usersInDatabase = _context.ApplicationUser.ToList();
+
+            var viewModel = new RegisterViewModel()
+            {
+                ApplicationUser = _context.ApplicationUser.FirstOrDefault(m => m.UserName == currentUserName)
+            };
+            return View(viewModel);
         }
         [HttpPost]
         [ValidateAntiForgeryToken]
