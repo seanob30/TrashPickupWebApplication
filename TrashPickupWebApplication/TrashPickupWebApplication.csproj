@@ -232,6 +232,14 @@
     <Compile Include="Migrations\201701182229134_mightbenothing.Designer.cs">
       <DependentUpon>201701182229134_mightbenothing.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201701182258401_MigrationCheck.cs" />
+    <Compile Include="Migrations\201701182258401_MigrationCheck.Designer.cs">
+      <DependentUpon>201701182258401_MigrationCheck.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201701182317222_RemovedPaymentForeignKey.cs" />
+    <Compile Include="Migrations\201701182317222_RemovedPaymentForeignKey.Designer.cs">
+      <DependentUpon>201701182317222_RemovedPaymentForeignKey.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountTypes.cs" />
     <Compile Include="Models\CardTypes.cs" />
@@ -356,6 +364,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201701182229134_mightbenothing.resx">
       <DependentUpon>201701182229134_mightbenothing.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201701182258401_MigrationCheck.resx">
+      <DependentUpon>201701182258401_MigrationCheck.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201701182317222_RemovedPaymentForeignKey.resx">
+      <DependentUpon>201701182317222_RemovedPaymentForeignKey.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

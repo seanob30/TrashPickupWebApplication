@@ -20,8 +20,6 @@ namespace TrashPickupWebApplication.Models
         public int StateId { get; set; }
         public ZipCode ZipCode { get; set; }
         public int ZipCodeId { get; set; }
-        public PaymentInformation PaymentInformation { get; set; }
-        public int PaymentInformationId { get; set; }
 
 
     public async Task<ClaimsIdentity> GenerateUserIdentityAsync(UserManager<ApplicationUser> manager)

@@ -176,7 +176,6 @@ namespace TrashPickupWebApplication.Controllers
                     CityId = model.ApplicationUser.CityId,
                     StateId = model.ApplicationUser.StateId,
                     ZipCodeId = model.ApplicationUser.ZipCodeId,
-                    PaymentInformationId = 0
                 };
                 
                 var result = await UserManager.CreateAsync(user, model.Password);
