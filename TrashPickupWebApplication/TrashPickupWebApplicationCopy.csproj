@@ -224,6 +224,10 @@
     <Compile Include="Migrations\201701181833223_SeedDays.Designer.cs">
       <DependentUpon>201701181833223_SeedDays.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201701181856256_SeedMoreTables.cs" />
+    <Compile Include="Migrations\201701181856256_SeedMoreTables.Designer.cs">
+      <DependentUpon>201701181856256_SeedMoreTables.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountTypes.cs" />
     <Compile Include="ViewModels\AccountViewModels.cs" />
@@ -335,6 +339,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201701181833223_SeedDays.resx">
       <DependentUpon>201701181833223_SeedDays.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201701181856256_SeedMoreTables.resx">
+      <DependentUpon>201701181856256_SeedMoreTables.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
