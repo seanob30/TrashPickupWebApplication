@@ -33,9 +33,8 @@ namespace TrashPickupWebApplication.Models
         }
     }
 
-    public class ApplicationDbContext : IdentityDbContext
+    public class ApplicationDbContext : IdentityDbContext<ApplicationUser>
     {
-        public DbSet<ApplicationUser> ApplicationUser { get; set; }
         public DbSet<StreetAddress> StreetAddress { get; set; }
         public DbSet<City> City { get; set; }
         public DbSet<State> State { get; set; }
