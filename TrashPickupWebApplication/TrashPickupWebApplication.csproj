@@ -253,6 +253,7 @@
     <Compile Include="Models\Days.cs" />
     <Compile Include="Models\IdentityModels.cs" />
     <Compile Include="Models\PickupIntervals.cs" />
+    <Compile Include="ViewModels\ChangeInfoViewModel.cs" />
     <Compile Include="ViewModels\ManageViewModels.cs" />
     <Compile Include="Models\RegularServices.cs" />
     <Compile Include="Models\ScheduledServices.cs" />

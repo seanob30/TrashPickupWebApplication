@@ -30,10 +30,13 @@ namespace TrashPickupWebApplication.Controllers
             var cities = _context.City.ToList();
             var states = _context.State.ToList();
             var zipcodes = _context.ZipCode.ToList();
+            var currentUser = _context.Users.FirstOrDefault(m => m.UserName == currentUserName);
 
-            var viewModel = new RegisterViewModel()
+            var viewModel = new ChangeInfoViewModel()
             {
-                ApplicationUser = _context.Users.FirstOrDefault(m => m.UserName == currentUserName),
+                FirstName = currentUser.FirstName,
+                LastName = currentUser.LastName,
+                StreetAddress = currentUser.StreetAddress,
                 CitiesList = cities,
                 StatesList = states,
                 ZipCodesList = zipcodes,
@@ -44,7 +47,7 @@ namespace TrashPickupWebApplication.Controllers
 
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult ChangeMyInfo(RegisterViewModel model)
+        public ActionResult ChangeMyInfo(ChangeInfoViewModel model)
         {
             if (!ModelState.IsValid)
             {
