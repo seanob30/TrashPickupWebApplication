@@ -11,11 +11,12 @@ namespace TrashPickupWebApplication.Models
     {
         [Key]
         public int ID { get; set; }
-
-        public string ServiceTypeID { get; set; }
+        public string SeceduledUser { get; set; }
         public RegularServices ServiceTypeId { get; set; }
-
-        public string ServiceIntervalID { get; set; }
+        public int ServiceTypeID { get; set; }
         public PickupIntervals ServiceIntervalId { get; set; }
+        public int ServiceIntervalID { get; set; }
+        public Days Days { get; set; }
+        public int DayId { get; set; }
     }
 }

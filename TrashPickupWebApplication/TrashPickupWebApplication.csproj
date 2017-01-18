@@ -220,6 +220,10 @@
     <Compile Include="Migrations\201701181723183_AddedApplicationUserToViewModel.Designer.cs">
       <DependentUpon>201701181723183_AddedApplicationUserToViewModel.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201701182041282_AddAndAlterServicesModel.cs" />
+    <Compile Include="Migrations\201701182041282_AddAndAlterServicesModel.Designer.cs">
+      <DependentUpon>201701182041282_AddAndAlterServicesModel.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountTypes.cs" />
     <Compile Include="ViewModels\AccountViewModels.cs" />
@@ -238,6 +242,8 @@
     <Compile Include="obj\Debug\TemporaryGeneratedFile_E7A71F73-0F8D-4B9B-B56E-8E70B10BC5D3.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Startup.cs" />
+    <Compile Include="ViewModels\PaymentViewModel.cs" />
+    <Compile Include="ViewModels\ServicesViewModel.cs" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Content\bootstrap-journal.css" />
@@ -331,6 +337,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201701181723183_AddedApplicationUserToViewModel.resx">
       <DependentUpon>201701181723183_AddedApplicationUserToViewModel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201701182041282_AddAndAlterServicesModel.resx">
+      <DependentUpon>201701182041282_AddAndAlterServicesModel.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

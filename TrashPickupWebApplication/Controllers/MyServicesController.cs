@@ -33,7 +33,7 @@ namespace TrashPickupWebApplication.Controllers
         public ActionResult ChangeMyServices(ServicesViewModel model)
         {
             //maybe sent to change my paym,ent if thwey dont have it set up yet
-            return RedirectToAction("Index","MyServices");
+            return RedirectToAction("Index", "MyServices");
         }
         public ActionResult ChangeMyPaymentInfo()
         {
