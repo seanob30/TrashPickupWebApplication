@@ -4,15 +4,20 @@ using System.Linq;
 using System.Web;
 using System.Web.Mvc;
 using TrashPickupWebApplication.Models;
+using TrashPickupWebApplication.ViewModels;
 
 namespace TrashPickupWebApplication.Controllers
 {
     public class RegistrationController : Controller
     {
         ApplicationDbContext _context;
+        AccountTypes _accountTypes;
+        UserInfo _userInfo;
         public RegistrationController()
         {
             _context = new ApplicationDbContext();
+            _accountTypes = new AccountTypes();
+            _userInfo = new UserInfo();
         }
         // GET: Registration
         public ActionResult Index()
@@ -21,24 +26,26 @@ namespace TrashPickupWebApplication.Controllers
         }
         public ActionResult ContactInfo()
         {
+            List<string> AccountTypes = new List<string>() { "Customer", "Employee", "Administrator" };
+            ViewBag.AccountTypes = AccountTypes;
             return View();
         }
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult ChangeMyInfo(UserInfo model)
+        public ActionResult ContactInfo(ClientInfoViewModel model)
         {
-            ViewBag.AccountTypes = _context.AccountType.ToList();
-            if (model.ID == 0)
+            if (model.User.ID == 0)
             {
-                _context.UserInfo.Add(model);
+                _userInfo.Address = model.Address;
+                _userInfo.FirstName = model.User.FirstName;
+                _userInfo.LastName = model.User.LastName;
             }
             else
             {
-                var customerInDb = _context.UserInfo.Single(c => c.ID == model.ID);
+                var customerInDb = _context.UserInfo.Single(c => c.ID == model.User.ID);
 
                 TryUpdateModel(customerInDb);
             }
-            _context.SaveChanges();
             return RedirectToAction("MyServices", "Home");
         }
         public ActionResult ServicesInfo()

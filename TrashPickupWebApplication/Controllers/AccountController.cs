@@ -156,7 +156,7 @@ namespace TrashPickupWebApplication.Controllers
                 var user = new ApplicationUser { UserName = model.Email, Email = model.Email };
                 var info = new UserInfo();
                 info.ApplicationUserId = user.Id;
-                _context.UserInfo.Add(info);
+                
 
                 var result = await UserManager.CreateAsync(user, model.Password);
                 if (result.Succeeded)

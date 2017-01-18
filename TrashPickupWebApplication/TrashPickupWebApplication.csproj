@@ -212,6 +212,10 @@
     <Compile Include="Migrations\201701172116343_seedingzips.Designer.cs">
       <DependentUpon>201701172116343_seedingzips.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201701172209106_addedfromgit.cs" />
+    <Compile Include="Migrations\201701172209106_addedfromgit.Designer.cs">
+      <DependentUpon>201701172209106_addedfromgit.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountTypes.cs" />
     <Compile Include="Models\Address.cs" />
@@ -319,6 +323,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201701172116343_seedingzips.resx">
       <DependentUpon>201701172116343_seedingzips.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201701172209106_addedfromgit.resx">
+      <DependentUpon>201701172209106_addedfromgit.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
