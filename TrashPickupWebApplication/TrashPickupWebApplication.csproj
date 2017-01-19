@@ -252,6 +252,10 @@
     <Compile Include="Migrations\201701190235039_ClearedUserTable.Designer.cs">
       <DependentUpon>201701190235039_ClearedUserTable.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201701191531200_ChangedPaymentId.cs" />
+    <Compile Include="Migrations\201701191531200_ChangedPaymentId.Designer.cs">
+      <DependentUpon>201701191531200_ChangedPaymentId.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountTypes.cs" />
     <Compile Include="Models\CardTypes.cs" />
@@ -345,7 +349,6 @@
     <Content Include="Views\MyServices\ChangeMyInfo.cshtml" />
     <Content Include="Views\MyServices\ChangeMyServices.cshtml" />
     <Content Include="Views\MyServices\ChangeMyPaymentInfo.cshtml" />
-    <Content Include="Views\MyServices\CreateMyPaymentInfo.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -394,6 +397,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201701190235039_ClearedUserTable.resx">
       <DependentUpon>201701190235039_ClearedUserTable.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201701191531200_ChangedPaymentId.resx">
+      <DependentUpon>201701191531200_ChangedPaymentId.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

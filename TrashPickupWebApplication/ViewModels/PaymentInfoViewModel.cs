@@ -47,8 +47,6 @@ namespace TrashPickupWebApplication.Models
         [Display(Name = "Customer Username")]
         public string CustomerUsername { get; set; }
 
-
-        public IEnumerable<ZipCode> ZipCodesList { get; set; }
         public IEnumerable<CardTypes> CardTypesList { get; set; }
         public ApplicationUser ApplicationUser { get; set; }
         public PaymentInformation PaymentInformation { get; set; }
