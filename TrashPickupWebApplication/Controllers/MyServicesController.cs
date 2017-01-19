@@ -76,15 +76,47 @@ namespace TrashPickupWebApplication.Controllers
             _context.SaveChanges();
             return RedirectToAction("Index", "MyServices");
         }
-        public ActionResult ChangeMyServices()
+        public ActionResult ViewMyServices()
         {
-            return View();
+            var scheduledServices = _context.ScheduledServices.ToList();
+
+            var viewModel = new ServicesViewModel
+            {
+                ScheduledServicesList = scheduledServices
+            };
+
+            return View(viewModel);
         }
+        public ActionResult AddService()
+        {
+            var days = _context.Days.ToList();
+            var intervals = _context.PickupIntervals.ToList();
+            var regularServices = _context.RegularServices.ToList();
+
+            var viewModel = new ServicesViewModel
+            {
+                PickupIntervalsList =  intervals,
+                DaysList = days,
+                RegularServicesList = regularServices
+            };
+
+            return View(viewModel);
+        }
+
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult ChangeMyServices(ServicesViewModel model)
+        public ActionResult AddService(ServicesViewModel model)
         {
-            //maybe sent to change my paym,ent if thwey dont have it set up yet
+            var currentUserName = User.Identity.Name;
+            var service = new ScheduledServices
+            {
+                ScheduledUser = currentUserName,
+                RegularServiceID = model.RegularServiceId,
+                PickupIntervalID = model.PickupIntervalId,
+                DayID = model.DayId
+            };
+            _context.ScheduledServices.Add(service);
+            _context.SaveChanges();
             return RedirectToAction("Index", "MyServices");
         }
 

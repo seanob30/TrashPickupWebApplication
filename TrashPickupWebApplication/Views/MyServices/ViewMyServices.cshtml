@@ -1,0 +1,43 @@
+﻿@model TrashPickupWebApplication.Models.ServicesViewModel
+@{
+    ViewBag.Title = "Change My Services";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>My Services</h2>
+
+<table class="table table-bordered table-hover">
+<thead>
+    <tr>
+        <th>Service</th>
+        <th>Pickup Interval</th>
+        <th>Pickup Day</th>
+    </tr>
+</thead>
+<tbody>
+    @try
+    {
+        foreach (var service in Model.ScheduledServicesList)
+        {
+            if (service.ScheduledUser == User.Identity.Name)
+            {
+                var regularService = Model._context.RegularServices.SingleOrDefault(m => m.ID == service.RegularServiceID);
+                var interval = Model._context.PickupIntervals.SingleOrDefault(m => m.ID == service.PickupIntervalID);
+                var day = Model._context.Days.SingleOrDefault(m => m.ID == service.DayID);
+                <tr>
+                    <td>@regularService.ServiceName</td>
+                    <td>@interval.Frequency</td>
+                    <td>@day.Day</td>
+                </tr>
+            }
+
+        }
+        <td>@Html.ActionLink("Add Service", "AddService", "MyServices")</td>
+    }
+    catch
+    {
+        <td>@Html.ActionLink("Add Service", "AddService", "MyServices")</td>
+    }
+</tbody>
+</table>
+
