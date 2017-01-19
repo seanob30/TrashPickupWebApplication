@@ -17,11 +17,12 @@ namespace TrashPickupWebApplication.Controllers
         // GET: MyRoutes
         public ActionResult Index()
         {
+            List<ApplicationUser> inTerritories = new List<ApplicationUser>();
             var zipcodes = _context.ZipCode.ToList();
-
             var viewModel = new MyRoutesViewModel()
             {
                 ZipCodeList = zipcodes,
+                usersInTerritory = inTerritories,
             };
             return View(viewModel);
         }
@@ -29,8 +30,23 @@ namespace TrashPickupWebApplication.Controllers
         [ValidateAntiForgeryToken]
         public ActionResult Index(MyRoutesViewModel model)
         {
-
-            return View();
+            List<ApplicationUser> users = new List<ApplicationUser>();
+            List<ApplicationUser> applicationUsers = _context.Users.ToList();
+            var selectedZipcode = model.ZipCodeId;
+            var zipcodes = _context.ZipCode.ToList();
+            foreach (ApplicationUser i in applicationUsers)
+            {
+                if (i.ZipCodeId == selectedZipcode)
+                {
+                    users.Add(i);
+                }
+            }
+            var viewModel = new MyRoutesViewModel()
+            {
+                usersInTerritory = users,
+                ZipCodeList = zipcodes
+            };
+            return View(viewModel);
         }
     }
             

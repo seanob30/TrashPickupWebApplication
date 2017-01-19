@@ -11,7 +11,7 @@
         <p>Please Select a zipcode to view route</p>
     </div>
 
-    @using (Html.BeginForm("Index", "MyRoutesController", FormMethod.Post, new { @class = "form-horizontal", role = "form" }))
+    @using (Html.BeginForm("Index", "MyRoutes", FormMethod.Post, new { @class = "form-horizontal", role = "form" }))
     {
         @Html.AntiForgeryToken()
         <hr />
@@ -77,15 +77,16 @@
         <div>
             <b>Start:</b>
             <select id="start">
-                <option value="Halifax, NS">Halifax, NS</option>
-                <option value="Boston, MA">Boston, MA</option>
-                <option value="New York, NY">New York, NY</option>
-                <option value="Miami, FL">Miami, FL</option>
+                <option value="Chicago, IL">GarbageTown USA</option>
             </select>
             <br>
             <b>Waypoints:</b> <br>
             <i>(Ctrl+Click or Cmd+Click for multiple selection)</i> <br>
             <select multiple id="waypoints">
+                @foreach (var i in Model.usersInTerritory)
+                {
+                    <option value=@i.StreetAddress, @i.City, @i.State, @i.ZipCode> @i.FirstName @i.LastName</option>
+                }
                 <option value="montreal, quebec">Montreal, QBC</option>
                 <option value="toronto, ont">Toronto, ONT</option>
                 <option value="chicago, il">Chicago</option>
@@ -164,6 +165,7 @@
         <script async defer
                 src="https://maps.googleapis.com/maps/api/js?key=AIzaSyABln82MFoySBkjQPoJjeVYgeoK_R_RKPE&callback=initMap">
         </script>
+    
     </body>
 @section Scripts {
     @Scripts.Render("~/bundles/jqueryval")

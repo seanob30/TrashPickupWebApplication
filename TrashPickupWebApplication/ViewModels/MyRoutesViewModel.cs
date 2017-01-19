@@ -11,10 +11,12 @@ namespace TrashPickupWebApplication.Models
     {
         [Required]
         [Display(Name = "Zipcode")]
-        public string ZipCodeId { get; set; }
+        public int ZipCodeId { get; set; }
 
 
         public IEnumerable <ZipCode> ZipCodeList { get; set; }
         public IEnumerable<ApplicationUser> ApplicationUserList { get; set; }
+        public ApplicationUser ApplicationUser { get; set; }
+        public List<ApplicationUser> usersInTerritory { get; set; }
     }
 }
