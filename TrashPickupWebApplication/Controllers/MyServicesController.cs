@@ -117,7 +117,7 @@ namespace TrashPickupWebApplication.Controllers
             };
             _context.ScheduledServices.Add(service);
             _context.SaveChanges();
-            return RedirectToAction("Index", "MyServices");
+            return RedirectToAction("ViewMyServices", "MyServices");
         }
 
         public ActionResult ChangeMyPaymentInfo()

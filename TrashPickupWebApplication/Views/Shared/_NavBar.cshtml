@@ -6,16 +6,16 @@
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
             </button>
-            @Html.ActionLink("Trash Pickup", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })
+            @Html.ActionLink("GtUSA", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })
         </div>
         @using Microsoft.AspNet.Identity
         @if (Request.IsAuthenticated)
         {
             <div class="navbar-collapse collapse">
                 <ul class="nav navbar-nav">
-                    <li>@Html.ActionLink("Mission", "Mission", "Home")</li>
                     <li>@Html.ActionLink("Services", "Services", "Home")</li>
                     <li>@Html.ActionLink("Contact", "Contact", "Home")</li>
+                    <li>@Html.ActionLink("Routes", "Index", "MyRoutes")</li>
                     <li>@Html.ActionLink("My Services", "Index", "MyServices")</li>
                 </ul>
                 @Html.Partial("_LoginPartial")
@@ -25,7 +25,6 @@
         {
             <div class="navbar-collapse collapse">
                 <ul class="nav navbar-nav">
-                    <li>@Html.ActionLink("Mission", "Mission", "Home")</li>
                     <li>@Html.ActionLink("Services", "Services", "Home")</li>
                     <li>@Html.ActionLink("Contact", "Contact", "Home")</li>
                 </ul>

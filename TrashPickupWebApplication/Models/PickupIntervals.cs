@@ -10,7 +10,7 @@ namespace TrashPickupWebApplication.Models
     {
         [Key]
         public int ID { get; set; }
-        public string Frequency { get; set;}
+        public string Frequency { get; set; }
 
     }
 }

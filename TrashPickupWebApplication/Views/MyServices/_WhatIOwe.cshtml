@@ -1,0 +1,22 @@
+﻿@model TrashPickupWebApplication.Models.ServicesViewModel
+    
+@try
+{
+    var counter = 0;
+    foreach (var service in Model.ScheduledServicesList)
+    {
+        if (service.ScheduledUser == User.Identity.Name)
+        {
+            var regularService = Model._context.RegularServices.SingleOrDefault(m => m.ID == service.RegularServiceID);
+
+            counter += regularService.CostPerPickup;
+        }
+
+    }
+    var monthlyCounter = counter * 4;
+    <h3>You owe $@monthlyCounter.00 this month.</h3>
+}
+catch
+{
+    <h3>You owe $0.00 this month.</h3>
+}

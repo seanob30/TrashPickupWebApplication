@@ -268,15 +268,39 @@
     <Compile Include="Migrations\201701191751428_Check.Designer.cs">
       <DependentUpon>201701191751428_Check.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201701191805514_SimplifiedSeedForInterval.cs" />
+    <Compile Include="Migrations\201701191805514_SimplifiedSeedForInterval.Designer.cs">
+      <DependentUpon>201701191805514_SimplifiedSeedForInterval.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201701191808441_SimplifiedSeedForInterval2.cs" />
+    <Compile Include="Migrations\201701191808441_SimplifiedSeedForInterval2.Designer.cs">
+      <DependentUpon>201701191808441_SimplifiedSeedForInterval2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201701191829555_ReseedIntervals.cs" />
+    <Compile Include="Migrations\201701191829555_ReseedIntervals.Designer.cs">
+      <DependentUpon>201701191829555_ReseedIntervals.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201701191854353_Fixedlegacykeys.cs" />
+    <Compile Include="Migrations\201701191854353_Fixedlegacykeys.Designer.cs">
+      <DependentUpon>201701191854353_Fixedlegacykeys.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201701191855533_OnlyWeekly.cs" />
+    <Compile Include="Migrations\201701191855533_OnlyWeekly.Designer.cs">
+      <DependentUpon>201701191855533_OnlyWeekly.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201701191901459_NewSeed.cs" />
+    <Compile Include="Migrations\201701191901459_NewSeed.Designer.cs">
+      <DependentUpon>201701191901459_NewSeed.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountTypes.cs" />
     <Compile Include="Models\CardTypes.cs" />
     <Compile Include="Models\PaymentInformation.cs" />
+    <Compile Include="Models\PickupIntervals.cs" />
     <Compile Include="ViewModels\AccountViewModels.cs" />
     <Compile Include="Models\City.cs" />
     <Compile Include="Models\Days.cs" />
     <Compile Include="Models\IdentityModels.cs" />
-    <Compile Include="Models\PickupIntervals.cs" />
     <Compile Include="ViewModels\ChangeInfoViewModel.cs" />
     <Compile Include="ViewModels\ManageViewModels.cs" />
     <Compile Include="Models\RegularServices.cs" />
@@ -362,6 +386,7 @@
     <Content Include="Views\MyServices\ViewMyServices.cshtml" />
     <Content Include="Views\MyServices\ChangeMyPaymentInfo.cshtml" />
     <Content Include="Views\MyServices\AddService.cshtml" />
+    <Content Include="Views\MyServices\_WhatIOwe.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -422,6 +447,24 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201701191751428_Check.resx">
       <DependentUpon>201701191751428_Check.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201701191805514_SimplifiedSeedForInterval.resx">
+      <DependentUpon>201701191805514_SimplifiedSeedForInterval.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201701191808441_SimplifiedSeedForInterval2.resx">
+      <DependentUpon>201701191808441_SimplifiedSeedForInterval2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201701191829555_ReseedIntervals.resx">
+      <DependentUpon>201701191829555_ReseedIntervals.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201701191854353_Fixedlegacykeys.resx">
+      <DependentUpon>201701191854353_Fixedlegacykeys.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201701191855533_OnlyWeekly.resx">
+      <DependentUpon>201701191855533_OnlyWeekly.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201701191901459_NewSeed.resx">
+      <DependentUpon>201701191901459_NewSeed.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

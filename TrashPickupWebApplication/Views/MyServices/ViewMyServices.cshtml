@@ -5,16 +5,18 @@
 }
 
 <h2>My Services</h2>
+<body>
+@Html.Partial("_WhatIOwe")
 
 <table class="table table-bordered table-hover">
-<thead>
+    <thead>
     <tr>
         <th>Service</th>
         <th>Pickup Interval</th>
         <th>Pickup Day</th>
     </tr>
-</thead>
-<tbody>
+    </thead>
+    <tbody>
     @try
     {
         foreach (var service in Model.ScheduledServicesList)
@@ -38,6 +40,7 @@
     {
         <td>@Html.ActionLink("Add Service", "AddService", "MyServices")</td>
     }
-</tbody>
+    </tbody>
 </table>
+</body>
 

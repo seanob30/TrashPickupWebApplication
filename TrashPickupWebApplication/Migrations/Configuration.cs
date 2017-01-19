@@ -24,15 +24,11 @@ namespace TrashPickupWebApplication.Migrations
                  new Models.Days { ID = 6, Day = "Saturday" }
                  );
             context.RegularServices.AddOrUpdate(m => m.ID,
-                new Models.RegularServices { ID = 1, ServiceName = "Trash Pickup", CostPerPickup = 15 },
-                new Models.RegularServices { ID = 2, ServiceName = "Recycling Pickup", CostPerPickup = 20 }
+                new Models.RegularServices { ID = 1, ServiceName = "Trash Pickup", CostPerPickup = 20 },
+                new Models.RegularServices { ID = 2, ServiceName = "Recycling Pickup", CostPerPickup = 15 }
                 );
             context.PickupIntervals.AddOrUpdate(m => m.ID,
-                new Models.PickupIntervals { ID = 1, Frequency = "Once" },
-                new Models.PickupIntervals { ID = 2, Frequency = "Every Day" },
-                new Models.PickupIntervals { ID = 3, Frequency = "Once A Week" },
-                new Models.PickupIntervals { ID = 4, Frequency = "Twice a month" },
-                new Models.PickupIntervals { ID = 5, Frequency = "Once A Month" }
+                new Models.PickupIntervals { ID = 1, Frequency = "Weekly" }
                 );
             context.ZipCode.AddOrUpdate(m => m.ID,
                 new Models.ZipCode { ID = 4, Zipcodes = 53209 },
