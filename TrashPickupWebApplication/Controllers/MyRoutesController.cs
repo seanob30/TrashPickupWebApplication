@@ -25,5 +25,13 @@ namespace TrashPickupWebApplication.Controllers
             };
             return View(viewModel);
         }
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public ActionResult Index(MyRoutesViewModel model)
+        {
+
+            return View();
+        }
     }
+            
 }
