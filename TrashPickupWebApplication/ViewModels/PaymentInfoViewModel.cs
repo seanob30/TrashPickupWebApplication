@@ -3,18 +3,26 @@ using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Web;
+using TrashPickupWebApplication.Models;
 
 namespace TrashPickupWebApplication.Models
 {
-    public class PaymentViewModel
+    public class PaymentInfoViewModel
     {
+        private ApplicationDbContext _context;
+
+        public PaymentInfoViewModel()
+        {
+            _context = new ApplicationDbContext();
+        }
+
         [Required]
         [Display(Name = "Card Type")]
         public int CardTypeId { get; set; }
 
         [Required]
         [Display(Name = "Card Number")]
-        public string CardNumber { get; set; }
+        public int CardNumber { get; set; }
 
         [Required]
         [Display(Name = "Expiration Month")]
@@ -25,18 +33,25 @@ namespace TrashPickupWebApplication.Models
         public int ExpirationYear { get; set; }
 
         [Required]
-        [Display(Name = "CCV Code")]
+        [Display(Name = "City")]
         public int CCVCode { get; set; }
 
         [Required]
-        [Display(Name = "Name on Card")]
+        [Display(Name = "Name On Card")]
         public string NameOnCard { get; set; }
 
         [Required]
-        [Display(Name = "Zipcode on Card")]
-        public int ZipcodeOnCard { get; set; }
+        [Display(Name = "Zipcode")]
+        public int ZipCode { get; set; }
 
-        public IEnumerable<PaymentInformation> PaymentInformationList { get; set; }
+        [Display(Name = "Customer Username")]
+        public string CustomerUsername { get; set; }
+
+
+        public IEnumerable<ZipCode> ZipCodesList { get; set; }
         public IEnumerable<CardTypes> CardTypesList { get; set; }
+        public ApplicationUser ApplicationUser { get; set; }
+        public PaymentInformation PaymentInformation { get; set; }
+
     }
 }

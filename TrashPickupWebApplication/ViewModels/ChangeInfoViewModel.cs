@@ -26,7 +26,7 @@ namespace TrashPickupWebApplication.Models
 
         [Required]
         [Display(Name = "Account Type")]
-        public int AccountTypeId { get; set; }
+        public string AccountTypeId { get; set; }
 
         [Required]
         [Display(Name = "Street Address")]
@@ -34,15 +34,15 @@ namespace TrashPickupWebApplication.Models
 
         [Required]
         [Display(Name = "City")]
-        public int CityId { get; set; }
+        public string CityId { get; set; }
 
         [Required]
         [Display(Name = "State")]
-        public int StateId { get; set; }
+        public string StateId { get; set; }
 
         [Required]
         [Display(Name = "Zipcode")]
-        public int ZipCodeId { get; set; }
+        public string ZipCodeId { get; set; }
 
 
         public IEnumerable<City> CitiesList { get; set; }

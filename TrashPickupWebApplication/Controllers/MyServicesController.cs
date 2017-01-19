@@ -40,7 +40,7 @@ namespace TrashPickupWebApplication.Controllers
                 CitiesList = cities,
                 StatesList = states,
                 ZipCodesList = zipcodes,
-                AccountTypesList = accountTypes
+                AccountTypesList = accountTypes,
             };
             return View(viewModel);
         }
@@ -81,14 +81,93 @@ namespace TrashPickupWebApplication.Controllers
             //maybe sent to change my paym,ent if thwey dont have it set up yet
             return RedirectToAction("Index", "MyServices");
         }
-        public ActionResult ChangeMyPaymentInfo()
+        public ActionResult CreateMyPaymentInfo()
         {
-            return View();
+            var currentUserName = User.Identity.Name;
+            var zipcodes = _context.ZipCode.ToList();
+            var cardTypes = _context.CardType.ToList();
+            var currentUser = _context.Users.FirstOrDefault(m => m.UserName == currentUserName);
+
+            var viewModel = new PaymentInfoViewModel
+            {
+                ApplicationUser = currentUser,
+                ZipCodesList = zipcodes,
+                CardTypesList = cardTypes
+
+            };
+
+            return View(viewModel);
         }
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult ChangeMyPaymentInfo(PaymentViewModel model)
+        public ActionResult CreateMyPaymentInfo(PaymentInfoViewModel model)
         {
+            if (!ModelState.IsValid)
+            {
+                return HttpNotFound();
+            }
+            else
+            {
+                var newPaymentMethod = new PaymentInformation
+                {
+                    CardTypeId = model.CardTypeId,
+                    CardNumber = model.CardNumber,
+                    ExpirationMonth = model.ExpirationMonth,
+                    ExpirationYear = model.ExpirationYear,
+                    CCVCode = model.CCVCode,
+                    NameOnCard = model.NameOnCard,
+                    ZipcodeOnCard = model.ZipCode,
+                    CustomerName = model.CustomerUsername
+                };
+            }
+        
+            _context.SaveChanges();
+            return RedirectToAction("Index", "MyServices");
+        }
+        public ActionResult ChangeMyPaymentInfo()
+        {
+            var currentUserName = User.Identity.Name;
+            var usersInDatabase = _context.Users.ToList();
+            var zipcodes = _context.ZipCode.ToList();
+            var cardTypes = _context.CardType.ToList();
+            var currentUser = _context.Users.FirstOrDefault(m => m.UserName == currentUserName);
+            var currentPaymentMethod = _context.PaymentInformation.FirstOrDefault(m => m.CustomerName == currentUserName);
+
+            var viewModel = new PaymentInfoViewModel
+            {
+                ApplicationUser = currentUser,
+                PaymentInformation = currentPaymentMethod,
+                ZipCodesList = zipcodes,
+                CardTypesList = cardTypes
+
+            };
+
+            return View(viewModel);
+        }
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public ActionResult ChangeMyPaymentInfo(PaymentInfoViewModel model)
+        {
+            if (!ModelState.IsValid)
+            {
+                return HttpNotFound();
+            }
+            else
+            {
+                var currentUserName = User.Identity.Name;
+                var paymentMethodInDatabase = _context.PaymentInformation.SingleOrDefault(m => m.CustomerName == currentUserName);
+
+                paymentMethodInDatabase.CardTypeId = model.PaymentInformation.CardTypeId;
+                paymentMethodInDatabase.CardNumber = model.CardNumber;
+                paymentMethodInDatabase.ExpirationMonth = model.ExpirationMonth;
+                paymentMethodInDatabase.ExpirationYear = model.ExpirationYear;
+                paymentMethodInDatabase.CCVCode = model.CCVCode;
+                paymentMethodInDatabase.NameOnCard = model.NameOnCard;
+                paymentMethodInDatabase.ZipcodeOnCard = model.ZipCode;
+                paymentMethodInDatabase.CustomerName = currentUserName;
+            }
+
+            _context.SaveChanges();
             return RedirectToAction("Index", "MyServices");
         }
     }

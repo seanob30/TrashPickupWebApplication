@@ -244,6 +244,14 @@
     <Compile Include="Migrations\201701182331288_AddUsernameOnPaymentInfoAndFixedtypo.Designer.cs">
       <DependentUpon>201701182331288_AddUsernameOnPaymentInfoAndFixedtypo.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201701190205465_CheckMigration.cs" />
+    <Compile Include="Migrations\201701190205465_CheckMigration.Designer.cs">
+      <DependentUpon>201701190205465_CheckMigration.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201701190235039_ClearedUserTable.cs" />
+    <Compile Include="Migrations\201701190235039_ClearedUserTable.Designer.cs">
+      <DependentUpon>201701190235039_ClearedUserTable.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountTypes.cs" />
     <Compile Include="Models\CardTypes.cs" />
@@ -265,7 +273,7 @@
     <Compile Include="obj\Debug\TemporaryGeneratedFile_E7A71F73-0F8D-4B9B-B56E-8E70B10BC5D3.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Startup.cs" />
-    <Compile Include="ViewModels\PaymentViewModel.cs" />
+    <Compile Include="ViewModels\PaymentInfoViewModel.cs" />
     <Compile Include="ViewModels\ServicesViewModel.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -336,6 +344,7 @@
     <Content Include="Views\MyServices\ChangeMyInfo.cshtml" />
     <Content Include="Views\MyServices\ChangeMyServices.cshtml" />
     <Content Include="Views\MyServices\ChangeMyPaymentInfo.cshtml" />
+    <Content Include="Views\MyServices\CreateMyPaymentInfo.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -378,6 +387,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201701182331288_AddUsernameOnPaymentInfoAndFixedtypo.resx">
       <DependentUpon>201701182331288_AddUsernameOnPaymentInfoAndFixedtypo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201701190205465_CheckMigration.resx">
+      <DependentUpon>201701190205465_CheckMigration.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201701190235039_ClearedUserTable.resx">
+      <DependentUpon>201701190235039_ClearedUserTable.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
