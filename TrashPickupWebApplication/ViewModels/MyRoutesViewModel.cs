@@ -18,5 +18,7 @@ namespace TrashPickupWebApplication.Models
         public IEnumerable<ApplicationUser> ApplicationUserList { get; set; }
         public ApplicationUser ApplicationUser { get; set; }
         public List<ApplicationUser> usersInTerritory { get; set; }
+        public ApplicationDbContext ApplicationDbContext { get; set; }
+        public ApplicationDbContext _context = new ApplicationDbContext();
     }
 }

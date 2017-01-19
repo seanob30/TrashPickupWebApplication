@@ -85,7 +85,7 @@
             <select multiple id="waypoints">
                 @foreach (var i in Model.usersInTerritory)
                 {
-                    <option value=@i.StreetAddress, @i.City, @i.State, @i.ZipCode> @i.FirstName @i.LastName</option>
+                    <option value="@i.StreetAddress"> @i.FirstName @i.LastName</option>
                 }
                 <option value="montreal, quebec">Montreal, QBC</option>
                 <option value="toronto, ont">Toronto, ONT</option>
