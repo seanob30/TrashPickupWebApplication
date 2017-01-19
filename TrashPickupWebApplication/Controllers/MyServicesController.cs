@@ -17,6 +17,12 @@ namespace TrashPickupWebApplication.Controllers
         {
             _context = new ApplicationDbContext();
         }
+
+        protected override void Dispose(bool disposing)
+        {
+            _context.Dispose();
+        }
+
         // GET: MyServices
         public ActionResult Index()
         {
@@ -81,78 +87,24 @@ namespace TrashPickupWebApplication.Controllers
             //maybe sent to change my paym,ent if thwey dont have it set up yet
             return RedirectToAction("Index", "MyServices");
         }
-        public ActionResult CreateMyPaymentInfo()
-        {
-            var currentUserName = User.Identity.Name;
-            var zipcodes = _context.ZipCode.ToList();
-            var cardTypes = _context.CardType.ToList();
-            var currentUser = _context.Users.FirstOrDefault(m => m.UserName == currentUserName);
 
-            var viewModel = new PaymentInfoViewModel
-            {
-                ApplicationUser = currentUser,
-                ZipCodesList = zipcodes,
-                CardTypesList = cardTypes
-
-            };
-
-            return View(viewModel);
-        }
-        [HttpPost]
-        [ValidateAntiForgeryToken]
-        public ActionResult CreateMyPaymentInfo(PaymentInfoViewModel model)
-        {
-            if (!ModelState.IsValid)
-            {
-                return HttpNotFound();
-            }
-            else
-            {
-                var newPaymentMethod = new PaymentInformation
-                {
-                    CardTypeId = model.CardTypeId,
-                    CardNumber = model.CardNumber,
-                    ExpirationMonth = model.ExpirationMonth,
-                    ExpirationYear = model.ExpirationYear,
-                    CCVCode = model.CCVCode,
-                    NameOnCard = model.NameOnCard,
-                    ZipcodeOnCard = model.ZipCode,
-                    CustomerName = model.CustomerUsername
-                };
-            }
-        
-            _context.SaveChanges();
-            return RedirectToAction("Index", "MyServices");
-        }
         public ActionResult ChangeMyPaymentInfo()
         {
-            var currentUserName = User.Identity.Name;
-            var usersInDatabase = _context.Users.ToList();
-            var zipcodes = _context.ZipCode.ToList();
             var cardTypes = _context.CardType.ToList();
-            var currentUser = _context.Users.FirstOrDefault(m => m.UserName == currentUserName);
-            var currentPaymentMethod = _context.PaymentInformation.FirstOrDefault(m => m.CustomerName == currentUserName);
-
+            
             var viewModel = new PaymentInfoViewModel
             {
-                ApplicationUser = currentUser,
-                PaymentInformation = currentPaymentMethod,
-                ZipCodesList = zipcodes,
                 CardTypesList = cardTypes
-
             };
 
             return View(viewModel);
         }
+
         [HttpPost]
         [ValidateAntiForgeryToken]
         public ActionResult ChangeMyPaymentInfo(PaymentInfoViewModel model)
         {
-            if (!ModelState.IsValid)
-            {
-                return HttpNotFound();
-            }
-            else
+            try
             {
                 var currentUserName = User.Identity.Name;
                 var paymentMethodInDatabase = _context.PaymentInformation.SingleOrDefault(m => m.CustomerName == currentUserName);
@@ -165,10 +117,30 @@ namespace TrashPickupWebApplication.Controllers
                 paymentMethodInDatabase.NameOnCard = model.NameOnCard;
                 paymentMethodInDatabase.ZipcodeOnCard = model.ZipCode;
                 paymentMethodInDatabase.CustomerName = currentUserName;
-            }
 
-            _context.SaveChanges();
-            return RedirectToAction("Index", "MyServices");
+                _context.SaveChanges();
+                return RedirectToAction("Index", "MyServices");
+            }
+            catch
+            {
+                var currentUserName = User.Identity.Name;
+                var newPaymentMethod = new PaymentInformation
+                {
+                    CardTypeId = model.PaymentInformation.CardTypeId,
+                    CardNumber = model.CardNumber,
+                    ExpirationMonth = model.ExpirationMonth,
+                    ExpirationYear = model.ExpirationYear,
+                    CCVCode = model.CCVCode,
+                    NameOnCard = model.NameOnCard,
+                    ZipcodeOnCard = model.ZipCode,
+                    CustomerName = currentUserName
+                };
+                _context.PaymentInformation.Add(newPaymentMethod);
+                _context.SaveChanges();
+                return RedirectToAction("Index", "MyServices");
+            }
         }
+
+        
     }
 }
