@@ -1,8 +1,18 @@
-﻿
+﻿@model TrashPickupWebApplication.Models.MyRoutesViewModel
 @{
-    ViewBag.Title = "Index";
+    ViewBag.Title = "My Routes";
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
-<h2>Index</h2>
-
+<h2>My Routes</h2>
+<br />
+<br />
+<div>
+    <p>Please Select a zipcode to view route</p>
+</div>
+<div>
+    @Html.LabelFor(m => m.ZipCodeId, "Zipcode", new { @class = "col-md-2 control-label" })
+    <div class="col-md-10">
+        @Html.DropDownListFor(m => m.ZipCodeId, new SelectList(Model.ZipCodeList, "ID", "Zipcodes"), "", new { @class = "form-control" })
+    </div>
+</div>
