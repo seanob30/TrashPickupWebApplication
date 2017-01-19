@@ -256,6 +256,18 @@
     <Compile Include="Migrations\201701191531200_ChangedPaymentId.Designer.cs">
       <DependentUpon>201701191531200_ChangedPaymentId.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201701191626361_FixedDuplicateIds.cs" />
+    <Compile Include="Migrations\201701191626361_FixedDuplicateIds.Designer.cs">
+      <DependentUpon>201701191626361_FixedDuplicateIds.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201701191647111_ChangedScheduledServicesIDnames.cs" />
+    <Compile Include="Migrations\201701191647111_ChangedScheduledServicesIDnames.Designer.cs">
+      <DependentUpon>201701191647111_ChangedScheduledServicesIDnames.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201701191751428_Check.cs" />
+    <Compile Include="Migrations\201701191751428_Check.Designer.cs">
+      <DependentUpon>201701191751428_Check.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountTypes.cs" />
     <Compile Include="Models\CardTypes.cs" />
@@ -347,8 +359,9 @@
     <Content Include="Views\MyRoutes\Index.cshtml" />
     <Content Include="Views\Shared\_NavBar.cshtml" />
     <Content Include="Views\MyServices\ChangeMyInfo.cshtml" />
-    <Content Include="Views\MyServices\ChangeMyServices.cshtml" />
+    <Content Include="Views\MyServices\ViewMyServices.cshtml" />
     <Content Include="Views\MyServices\ChangeMyPaymentInfo.cshtml" />
+    <Content Include="Views\MyServices\AddService.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -400,6 +413,15 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201701191531200_ChangedPaymentId.resx">
       <DependentUpon>201701191531200_ChangedPaymentId.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201701191626361_FixedDuplicateIds.resx">
+      <DependentUpon>201701191626361_FixedDuplicateIds.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201701191647111_ChangedScheduledServicesIDnames.resx">
+      <DependentUpon>201701191647111_ChangedScheduledServicesIDnames.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201701191751428_Check.resx">
+      <DependentUpon>201701191751428_Check.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

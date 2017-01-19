@@ -15,7 +15,7 @@ namespace TrashPickupWebApplication.Migrations
         protected override void Seed(TrashPickupWebApplication.Models.ApplicationDbContext context)
         {
             context.Days.AddOrUpdate(m => m.ID,
-                 new Models.Days { ID = 1, Day = "Sunday" },
+                 new Models.Days { ID = 7, Day = "Sunday" },
                  new Models.Days { ID = 1, Day = "Monday" },
                  new Models.Days { ID = 2, Day = "Tuesday" },
                  new Models.Days { ID = 3, Day = "Wednesday" },
@@ -25,14 +25,14 @@ namespace TrashPickupWebApplication.Migrations
                  );
             context.RegularServices.AddOrUpdate(m => m.ID,
                 new Models.RegularServices { ID = 1, ServiceName = "Trash Pickup", CostPerPickup = 15 },
-                new Models.RegularServices { ID = 1, ServiceName = "Recycling Pickup", CostPerPickup = 20 }
+                new Models.RegularServices { ID = 2, ServiceName = "Recycling Pickup", CostPerPickup = 20 }
                 );
             context.PickupIntervals.AddOrUpdate(m => m.ID,
                 new Models.PickupIntervals { ID = 1, Frequency = "Once" },
-                new Models.PickupIntervals { ID = 1, Frequency = "Every Day" },
-                new Models.PickupIntervals { ID = 1, Frequency = "Once A Week" },
-                new Models.PickupIntervals { ID = 1, Frequency = "Twice a month" },
-                new Models.PickupIntervals { ID = 1, Frequency = "Once A Month" }
+                new Models.PickupIntervals { ID = 2, Frequency = "Every Day" },
+                new Models.PickupIntervals { ID = 3, Frequency = "Once A Week" },
+                new Models.PickupIntervals { ID = 4, Frequency = "Twice a month" },
+                new Models.PickupIntervals { ID = 5, Frequency = "Once A Month" }
                 );
             context.ZipCode.AddOrUpdate(m => m.ID,
                 new Models.ZipCode { ID = 4, Zipcodes = 53209 },
